@@ -27,7 +27,7 @@ const razorpay = new Razorpay({
   key_secret: "mlGSYrZIfvgKluCwkILe4dNc",
 });
 
-app.post("events/CS/razorpay", async (req, res) => {
+app.post("", async (req, res) => {
   const payment_capture = 1;
   console.log(req.body);
   const amount = req.body.amount;

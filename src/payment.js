@@ -1,5 +1,5 @@
 export const displayRazorPay = async (name, email, contact, amount) => {
-  const data = await fetch("events/CS/razorpay", {
+  const data = await fetch("", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
