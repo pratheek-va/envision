@@ -1,0 +1,44 @@
+.card-group {
+  border-radius: none;
+}
+
+.department-title {
+  color: white;
+  font-size: 1.6rem;
+  height: 6rem;
+  padding-bottom: 12rem;
+}
+
+.department-card {
+  font-size: 1.4rem;
+  background-color: var(--dark-blue);
+}
+
+.department-details {
+  text-align: center;
+  font-weight: 600;
+
+  height: 20rem;
+}
+
+.department-button:link,
+.department-button:visited {
+  text-decoration: none;
+  padding: 10px;
+  background-color: var(--gold);
+  color: var(--black);
+  text-transform: uppercase;
+}
+
+body {
+  overflow: auto;
+}
+footer {
+  position: static;
+}
+
+.link-item:link,
+.link-item:visited {
+  text-decoration: none;
+  color: black;
+}

@@ -1,0 +1,11 @@
+.row:last-child {
+  margin-bottom: 3rem;
+}
+
+.main-container {
+  background-color: black;
+}
+
+.event-card-container {
+  min-height: 80vh;
+}

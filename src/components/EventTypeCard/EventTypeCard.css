@@ -1,0 +1,68 @@
+.card-group {
+  border-radius: none;
+}
+
+.event-type-title {
+  color: white;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.t-register:link,
+.t-register:visited {
+  text-decoration: none;
+  padding: 10px;
+  background-color: var(--gold);
+  color: var(--black);
+  text-transform: uppercase;
+  margin-right: 1rem;
+}
+
+.t-event {
+  margin-left: 1rem;
+}
+
+.event-type-card {
+  font-size: 1.4rem;
+  background-color: var(--dark-blue);
+}
+
+.event-num {
+  font-size: 3rem;
+  color: var(--white);
+}
+.event-type-details {
+  text-align: center;
+  font-weight: 600;
+  height: 15rem;
+}
+
+.event-type-button:link,
+.event-type-button:visited {
+  text-decoration: none;
+  padding: 10px;
+  background-color: var(--gold);
+  color: var(--black);
+  text-transform: uppercase;
+}
+
+.no-event {
+  height: 7rem;
+}
+
+.no-title {
+  margin-bottom: 3rem;
+}
+
+body {
+  overflow: auto;
+}
+footer {
+  position: static;
+}
+
+.link-item:link,
+.link-item:visited {
+  text-decoration: none;
+  color: black;
+}

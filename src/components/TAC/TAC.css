@@ -1,0 +1,34 @@
+.title h2 {
+  color: white;
+  font-size: 3rem;
+  margin: 40px auto;
+  text-align: center;
+}
+.termsAndCondition {
+  color: white;
+  margin: 5%;
+  font-size: 1.6rem;
+}
+.termsAndCondition > div > p {
+  line-height: 1.6;
+}
+.termsAndCondition > div {
+  margin-top: 20px;
+}
+.termsAndCondition > div > h3 + p {
+  text-indent: 2em;
+}
+.termsAndCondition > div > h3 {
+  font-size: 1.3em;
+  margin-bottom: 5px;
+}
+.indent {
+  padding-left: 3em;
+  line-height: 1.6;
+}
+.text-igold {
+  color: #97c4b8;
+}
+.contact {
+  color: #dae5d0;
+}

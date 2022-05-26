@@ -1,0 +1,61 @@
+.person-info {
+  text-align: center;
+  margin-top: 5px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.person-info p {
+  text-transform: uppercase;
+}
+
+.person-name {
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.divMedia {
+  margin: 0.5rem;
+}
+
+.divMedia a ion-icon {
+  transition: all 0.2s;
+  transition: all 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+}
+
+.divMedia a ion-icon:hover {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.media {
+  text-decoration: none !important;
+  color: var(--gold);
+  margin: 5px;
+  font-size: 5rem;
+}
+.mail ion-icon,
+.phone ion-icon {
+  font-size: 2.6rem;
+}
+
+.insta:hover {
+  color: #f9004d;
+}
+
+.whatsapp:hover {
+  color: chartreuse;
+}
+
+.about-us-card {
+  background-color: var(--dark-blue);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  color: var(--grey);
+}

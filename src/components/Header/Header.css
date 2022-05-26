@@ -1,0 +1,192 @@
+body {
+  font-family: "Montserrat";
+}
+
+ul {
+  list-style: none;
+}
+
+.nav {
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.logo {
+  width: 20rem;
+  height: auto;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.menu-links ul li {
+  display: inline-block;
+  padding-right: 20px;
+}
+
+.search,
+.cart {
+  font-size: 20px;
+}
+
+.cart {
+  visibility: hidden;
+}
+
+.signin-header button,
+.signin-home button {
+  background-color: var(--dark-blue);
+  padding: 1rem 2rem;
+  color: var(--grey);
+  border: 1px solid var(--gold);
+}
+
+@keyframes float {
+  0% {
+    transform: translate(-50%, -46%);
+  }
+  50% {
+    transform: translate(-50%, -54%);
+  }
+  100% {
+    transform: translate(-50%, -46%);
+  }
+}
+
+.link-item:hover {
+  color: var(--gold);
+}
+
+.link-item {
+  color: var(--white);
+}
+
+.active:link {
+  text-decoration: none;
+  color: var(--white);
+}
+
+.nav-bar a:link,
+.nav-bar a:visited {
+  text-decoration: none;
+}
+
+.active .link-item {
+  color: var(--gold);
+}
+
+#nav-checkbox,
+.close-icon,
+.menu-icon {
+  display: none;
+}
+
+@media only screen and (max-width: 500px) {
+  .cart {
+    visibility: visible;
+    font-size: 4rem;
+  }
+
+  .logo {
+    width: 10rem;
+  }
+
+  .close-icon,
+  .menu-icon {
+    display: block;
+  }
+
+  .account,
+  .search {
+    display: none;
+  }
+
+  .menu-links ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 1rem;
+    transition: all 0.2s;
+    padding: 0;
+  }
+
+  .menu-links {
+    animation: dropdown 0.2s ease;
+
+    width: 100%;
+  }
+
+  .signin-header {
+    display: none;
+  }
+
+  .menu-links {
+    display: none;
+  }
+
+  .nav {
+    position: relative;
+    display: block;
+    padding: 1rem;
+  }
+
+  #nav-checkbox {
+    display: none;
+  }
+
+  .cart {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 1rem;
+  }
+
+  .link-item {
+    margin-top: 1rem;
+  }
+
+  .close-icon {
+    display: none;
+  }
+
+  #nav-checkbox:checked ~ .menu-links {
+    display: block;
+  }
+  #nav-checkbox:checked ~ label.close-icon {
+    display: block;
+  }
+
+  #nav-checkbox:checked ~ label.menu-icon {
+    display: none;
+  }
+}
+
+@keyframes dropdown {
+  0% {
+    opacity: 0;
+    transform: translatey(-100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@keyframes dropdown2 {
+  0% {
+    height: 8.5rem;
+  }
+
+  100% {
+    height: 36rem;
+  }
+}

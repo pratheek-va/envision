@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.card-details {
+  text-align: center;
+  font-weight: 600;
+  padding-bottom: 1.5rem;
+}
+
+.date-time {
+  padding-bottom: 1.5rem;
+}
+
+.event-card {
+  transition: all 0.2s;
+  font-size: 1.4rem;
+  background-color: var(--dark-blue);
+  color: var(--grey);
+}
+
+.event-title {
+  font-size: 1.8rem;
+}
+
+.event-card:hover {
+  transform: scale(1.1);
+}
+
+.event-button {
+  font-weight: 600;
+  text-decoration: none;
+  padding: 10px;
+  background-color: var(--gold);
+  color: var(--black);
+  text-transform: uppercase;
+  border: none;
+}
+
+body {
+  overflow: auto;
+}
+footer {
+  position: static;
+}
