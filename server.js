@@ -27,7 +27,7 @@ const razorpay = new Razorpay({
   key_secret: "Ats7rxmLnQaxcZ65HANgFJR8",
 });
 
-app.post("/razorpay", async (req, res) => {
+app.post("https://envision2.herokuapp.com/razorpay", async (req, res) => {
   const payment_capture = 1;
   console.log(req.body);
   const amount = req.body.amount;
