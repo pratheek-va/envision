@@ -53,6 +53,10 @@ app.post("/razorpay", async (req, res) => {
   }
 });
 
+app.get("/", async (req, res) => {
+  res.send("Hello World");
+});
+
 app.post("/verification", (req, res) => {
   const SECRET = "123456";
   const secret = "12345678";
