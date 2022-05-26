@@ -53,7 +53,7 @@ app.post("/razorpay", async (req, res) => {
   }
 });
 
-app.get("/", async (req, res) => {
+app.get("/home", async (req, res) => {
   res.send("Hello World");
 });
 
