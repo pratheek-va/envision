@@ -43,7 +43,7 @@ const eventTypeReducer = (state = { eventType: "" }, action) => {
 };
 
 const currentUser = {
-  token: "sfsfsf",
+  token: "",
   name: "",
   email: "",
 };
