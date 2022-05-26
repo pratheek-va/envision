@@ -23,8 +23,8 @@ app.use(
 const users = [];
 
 const razorpay = new Razorpay({
-  key_id: "rzp_test_drEFGyAqnu4jQT",
-  key_secret: "DbSwrawY70BiRQxQOUTlQiWq",
+  key_id: "rzp_live_htpjkvkw6aHOp0",
+  key_secret: "mlGSYrZIfvgKluCwkILe4dNc",
 });
 
 app.post("/razorpay", async (req, res) => {
