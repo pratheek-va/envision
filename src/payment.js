@@ -1,5 +1,5 @@
 export const displayRazorPay = async (name, email, contact, amount) => {
-  const data = await fetch("https://envision2022.herokuapp.com/razorpay", {
+  const data = await fetch("https://envision2.herokuapp.com/razorpay", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
