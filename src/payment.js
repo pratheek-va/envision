@@ -1,7 +1,7 @@
 import Axios from "axios";
 
 export const displayRazorPay = async (name, email, contact, amount) => {
-  const data = await Axios.post("https://envision2.herokuapp.com/razorpay", {
+  const data = await Axios.post("/razorpay", {
     amount: amount,
   }).then((t) => t.json());
 
