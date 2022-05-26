@@ -12,7 +12,7 @@ export const displayRazorPay = async (name, email, contact, amount) => {
   console.log(data);
 
   var options = {
-    key: "rzp_live_htpjkvkw6aHOp0",
+    key: "rzp_test_mbBz2fZlytAuDX",
     amount: data.amount,
     currency: data.currency,
     name: "Technical Event/CS",
