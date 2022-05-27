@@ -12,6 +12,7 @@
 .department-card {
   font-size: 1.4rem;
   background-color: var(--dark-blue);
+  text-transform: uppercase;
 }
 
 .department-details {

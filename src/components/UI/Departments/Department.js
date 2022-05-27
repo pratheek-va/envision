@@ -34,17 +34,17 @@ const Department = () => {
           <DepartmentCard
             name="School Of Architecture"
             code={"SSA"}
-            image="mechanical.jpg"
+            image="department-card-9.jpg"
           ></DepartmentCard>
           <DepartmentCard
             name="Cultural"
             code={"CUL"}
-            image="mechanical.jpg"
+            image="department-card-7.jpg"
           ></DepartmentCard>
           <DepartmentCard
             name="Sports"
-            code={"SPO"}
-            image="mechanical.jpg"
+            code={"SPORTS"}
+            image="department-card-8.jpg"
           ></DepartmentCard>
         </div>
       </div>

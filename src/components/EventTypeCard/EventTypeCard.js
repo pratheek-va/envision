@@ -13,7 +13,7 @@ const EventTypeCard = (props) => {
   const email = useSelector((state) => state.auth.email);
 
   const displayPayment = () => {
-    displayRazorPay(name, email, 9999999999, 100);
+    displayRazorPay(name, email, 9999999999, 1);
   };
   const setTypeTechnical = () => {
     dispatch({ type: "TECHNICAL" });

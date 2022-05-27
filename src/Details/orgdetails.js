@@ -14,22 +14,7 @@ const orgdetails = [
       email: "saadsalman.cool@gmail.com",
       image: "31.jpg",
     },
-    {
-      name: "Pranil Shetty",
-      role: "Envision Joint Secretary",
-      phno: "9663568318",
-      email: "pranilshty56@gmail.com",
-      image: "24.jpeg",
-    },
-    {
-      name: "Sanketh k",
-      role: "Envision Joint Secretary",
-      phno: "9995295814",
-      email: "sankethnayak623@gmail.com",
-      image: "26.jpeg",
-    },
-  ],
-  [
+    ,
     {
       name: "Bopanna HR",
       role: "Sports secretary",
@@ -51,6 +36,8 @@ const orgdetails = [
       email: "sowmi3b@gmail.com",
       image: "3.jpeg",
     },
+  ],
+  [
     {
       name: "Shelton Francis Cutinha",
       role: "Treasurer",
@@ -65,8 +52,7 @@ const orgdetails = [
       email: "ashwalkoushik2@gmail.com",
       image: "4.jpeg",
     },
-  ],
-  [
+    ,
     {
       name: "Chirag G Poojary",
       role: "Elite president",
@@ -81,6 +67,8 @@ const orgdetails = [
       email: "rakshithabnagendra@gmail.com",
       image: "6.jpeg",
     },
+  ],
+  [
     {
       name: "K.S.Nikhil ",
       role: "Event Co-ordinator",
@@ -95,8 +83,7 @@ const orgdetails = [
       email: "sushmaadiga2000@gmail.com",
       image: "8.jpeg",
     },
-  ],
-  [
+    ,
     {
       name: "Nihal.S.Jain",
       role: "Creative Team",
@@ -111,6 +98,8 @@ const orgdetails = [
       email: "pratheekvaberike@gmail.com",
       image: "12.jpeg",
     },
+  ],
+  [
     {
       name: "Vinayak Kammar",
       role: "Creative Team ",
@@ -125,8 +114,7 @@ const orgdetails = [
       email: "pratheekvaberike@gmail.com",
       image: "14.jpeg",
     },
-  ],
-  [
+    ,
     {
       name: "Jumaan Muzain Habeeb",
       role: "Creative Team",
@@ -141,6 +129,8 @@ const orgdetails = [
       email: "ppranavrao2000@gmail.com",
       image: "16.jpeg",
     },
+  ],
+  [
     {
       name: "Namrtha",
       role: "ISE Envision Coordinator",
@@ -155,8 +145,7 @@ const orgdetails = [
       email: "pratheekvaberike@gmail.com",
       image: "18.jpeg",
     },
-  ],
-  [
+    ,
     {
       name: "Shriraksha",
       role: "President of ASCEE",
@@ -171,7 +160,9 @@ const orgdetails = [
       email: "abhishekhb07@gmail.com",
       image: "20.jpg",
     },
+  ],
 
+  [
     {
       name: "Pushpaka ",
       role: "CSE  envision coordinator",
@@ -186,8 +177,7 @@ const orgdetails = [
       email: "Nagrajrshet11@gmail.com",
       image: "22.JPG",
     },
-  ],
-  [
+    ,
     {
       name: "Savan P",
       role: "AIMES PRESIDENT",
@@ -203,7 +193,9 @@ const orgdetails = [
       email: "surajnaiduk24@gmail.com",
       image: "25.jpeg",
     },
+  ],
 
+  [
     {
       name: "Danya S Sanil",
       role: "Envision Event Coordinator",

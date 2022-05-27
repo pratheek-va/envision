@@ -10,6 +10,8 @@ import AUDetails from "../../../Details/audetails";
 import EEDetails from "../../../Details/ece_eeedetails";
 import ISDetails from "../../../Details/ise_aimldetails";
 import MMDetails from "../../../Details/mech_marinedetails";
+import CulDetails from "../../../Details/culturaldetails";
+
 const allDetails = [
   ...CSDetails,
   ...AUDetails,
@@ -106,10 +108,8 @@ const Events = () => {
       }
     }
   } else if (departmentName === "CUL") {
-    let k = 0;
-    for (let i = 0; i < MMDetails.length; i++) {
-      events[k] = MMDetails[i];
-      k++;
+    for (let i = 0; i < CulDetails.length; i++) {
+      events[i] = CulDetails[i];
     }
   } else if (departmentName === "SPO") {
     let k = 0;

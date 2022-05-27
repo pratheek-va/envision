@@ -13,6 +13,7 @@ import Developer from "../Developer/Developer";
 import EventType from "../../EventType/EventType";
 import TAC from "../../TAC/TAC";
 import PrivacyPolicy from "../../PrivacyPolicy/PrivacyPolicy";
+import Extras from "../../Extras/Extras";
 
 const Main = () => {
   return (
@@ -31,6 +32,9 @@ const Main = () => {
       </Route>
       <Route path="/events/:departmentName" exact>
         <EventType></EventType>
+      </Route>
+      <Route path="/:extra/events" exact>
+        <Extras></Extras>
       </Route>
 
       <Route path="/events/:departmentName/:eventType" exact>
