@@ -1,8 +1,12 @@
-import Axios from "axios";
-
 export const displayRazorPay = async (name, email, contact, amount) => {
-  const data = await Axios.post("/razorpay", {
-    amount: amount,
+  const data = await fetch("http://localhost:5000/razorpay", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      amount: amount,
+    }),
   }).then((t) => t.json());
 
   console.log(data);
