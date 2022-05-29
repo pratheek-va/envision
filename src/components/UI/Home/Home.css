@@ -165,6 +165,10 @@ body {
   .envision-title {
     font-size: 4rem;
   }
+
+  #counter {
+    font-size: 4rem;
+  }
 }
 
 /* Header */

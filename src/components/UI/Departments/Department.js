@@ -46,6 +46,11 @@ const Department = () => {
             code={"SPORTS"}
             image="department-card-8.jpg"
           ></DepartmentCard>
+          <DepartmentCard
+            name="Paper Presentation"
+            code={"PP"}
+            image="department-card-8.jpg"
+          ></DepartmentCard>
         </div>
       </div>
     </React.Fragment>

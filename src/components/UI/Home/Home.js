@@ -57,70 +57,15 @@ const Home = () => {
   });
 
   useEffect(() => {
-    gsap.from(".logo", {
-      duration: 1,
-      opacity: 0,
-      x: -20,
-      ease: Expo.easeInOut,
-    });
-
     gsap.from(
       ".menu-links ul li",
       { duration: 1, opacity: 0, x: -20, ease: Power3.easeInOut },
       0.08
     );
 
-    gsap.from(".search", {
-      duration: 1,
-      delay: 0.5,
-      opacity: 0,
-      x: -20,
-      ease: Expo.easeInOut,
-    });
-
-    gsap.from(".account", {
-      duration: 1,
-      delay: 0.6,
-      opacity: 0,
-      x: -20,
-      ease: Expo.easeInOut,
-    });
-
-    gsap.from(".cart", {
-      duration: 1,
-      delay: 0.7,
-      opacity: 0,
-      x: -20,
-      ease: Expo.easeInOut,
-    });
-
-    gsap.from(".hero", {
-      duration: 1,
-      delay: 2,
-      opacity: 0,
-      y: -800,
-      ease: Expo.easeInOut,
-    });
-
-    gsap.from(".title", {
-      duration: 1,
-      delay: 1,
-      opacity: 0,
-      y: 20,
-      ease: Expo.easeInOut,
-    });
-
     gsap.from(".event-desc", {
       duration: 1,
       delay: 1,
-      opacity: 0,
-      y: 20,
-      ease: Expo.easeInOut,
-    });
-
-    gsap.from(".tagline", {
-      duration: 1,
-      delay: 1.3,
       opacity: 0,
       y: 20,
       ease: Expo.easeInOut,

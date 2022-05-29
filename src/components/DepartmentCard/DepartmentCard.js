@@ -7,6 +7,7 @@ const DepartmentCard = (props) => {
   const params = useParams();
   const extras = ["CUL", "SPORTS", "SSA"];
   const { extra } = params;
+  let name;
 
   const route =
     extras.indexOf(props.code) > -1

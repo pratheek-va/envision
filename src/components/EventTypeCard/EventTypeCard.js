@@ -24,12 +24,30 @@ const EventTypeCard = (props) => {
       orgname: "",
       orgno: "",
       image: "",
-      name: "Technical Event",
+      name: `Technical Event/${props.code}`,
       rounds: "",
       venue: "",
       regfee: "",
       fee: "",
     });
+  };
+
+  const openModalPaper = () => {
+    {
+      dispatch({ type: "SHOW" });
+      dispatch({
+        type: "SEND",
+        rules: [],
+        orgname: "",
+        orgno: "",
+        image: props.image,
+        name: `Technical Event/${props.code}`,
+        rounds: "",
+        venue: "",
+        regfee: "",
+        fee: "",
+      });
+    }
   };
 
   const setTypeNonTechnical = () => {
@@ -46,6 +64,23 @@ const EventTypeCard = (props) => {
           alt="Card image cap"
         />
         <div className="card-body event-type-details">
+          {props.name === "IT" && (
+            <div>
+              <h5 className="card-title event-type-title">{props.name}</h5>
+              <button className="event-button" onClick={openModalPaper}>
+                Register Now
+              </button>
+            </div>
+          )}
+
+          {props.name === "NON IT" && (
+            <div>
+              <h5 className="card-title event-type-title">{props.name}</h5>
+              <button className="event-button" onClick={openModalPaper}>
+                Register Now
+              </button>
+            </div>
+          )}
           {props.name == "Technical" && (
             <div>
               <h5 className="card-title event-type-title">{props.name}</h5>
@@ -67,7 +102,7 @@ const EventTypeCard = (props) => {
             </div>
           )}
 
-          {props.name != "Technical" && (
+          {props.name === "Non Technical" && (
             <div>
               <h5 className="card-title event-type-title no-title">
                 {props.name}

@@ -190,7 +190,7 @@ app.post("/verification", async (req, res) => {
       college: college,
       phoneNumber: phone,
       event: event,
-      use: usn,
+      usn: usn,
       amount: amount,
       paymentId: digest,
     }

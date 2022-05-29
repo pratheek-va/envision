@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./Header.css";
 import { NavLink, Redirect } from "react-router-dom";
 import {
@@ -48,6 +48,10 @@ const Header = () => {
       });
   };
 
+  const unCheck = () => {
+    document.getElementById("nav-checkbox").checked = false;
+  };
+
   const logoutHandler = () => {
     const auth = getAuth();
     signOut(auth);
@@ -70,17 +74,32 @@ const Header = () => {
       <div className="menu-links">
         <ul>
           <li className="nav-bar">
-            <NavLink activeClassName="active" to="/home" exact>
+            <NavLink
+              activeClassName="active"
+              to="/home"
+              onClick={unCheck}
+              exact
+            >
               <div className="link-item">Home</div>
             </NavLink>
           </li>
           <li className="nav-bar">
-            <NavLink activeClassName="active" to="/events" exact>
+            <NavLink
+              activeClassName="active"
+              to="/events"
+              onClick={unCheck}
+              exact
+            >
               <div className="link-item">Events</div>
             </NavLink>
           </li>
           <li className="nav-bar">
-            <NavLink activeClassName="active" to="/gallery" exact>
+            <NavLink
+              activeClassName="active"
+              onClick={unCheck}
+              to="/gallery"
+              exact
+            >
               <div className="link-item">Gallery</div>
             </NavLink>
           </li>
@@ -90,7 +109,12 @@ const Header = () => {
             </NavLink>
           </li> */}
           <li className="nav-bar">
-            <NavLink activeClassName="active" to="/aboutus" exact>
+            <NavLink
+              activeClassName="active"
+              to="/aboutus"
+              onClick={unCheck}
+              exact
+            >
               <div className="link-item">About us</div>
             </NavLink>
           </li>
