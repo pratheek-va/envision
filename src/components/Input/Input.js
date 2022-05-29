@@ -18,6 +18,7 @@ const Input = () => {
   const name = useSelector((state) => state.detail.name);
   const token = useSelector((state) => state.auth.token);
   const email = useSelector((state) => state.auth.email);
+  const venue = useSelector((state) => state.detail.venue);
 
   const dispatch = useDispatch();
 
@@ -72,7 +73,16 @@ const Input = () => {
   const displayPayment = () => {
     if (!nameIsValid || !phoneNumberIsValid || !usnIsValid || !collegeIsValid)
       return;
-    displayRazorPay(nameValue, email, college, phoneNumber, 200, usn, name);
+    displayRazorPay(
+      nameValue,
+      email,
+      college,
+      phoneNumber,
+      200,
+      usn,
+      name,
+      venue
+    );
     resetFields();
   };
 

@@ -5,7 +5,8 @@ export const displayRazorPay = async (
   phoneNumber,
   amount,
   usn,
-  event
+  event,
+  venue
 ) => {
   const data = await fetch(`https://envision22.herokuapp.com/razorpay`, {
     method: "POST",
@@ -20,6 +21,7 @@ export const displayRazorPay = async (
       amount,
       event,
       usn,
+      venue,
     }),
   }).then((t) => t.json());
 

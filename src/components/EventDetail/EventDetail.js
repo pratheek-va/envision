@@ -90,7 +90,16 @@ const EventDetail = (props) => {
   const displayPayment = () => {
     if (!nameIsValid || !phoneNumberIsValid || !usnIsValid || !collegeIsValid)
       return;
-    displayRazorPay(nameValue, email, college, phoneNumber, 200, usn, name);
+    displayRazorPay(
+      nameValue,
+      email,
+      college,
+      phoneNumber,
+      200,
+      usn,
+      name,
+      venue
+    );
     resetFields();
   };
 

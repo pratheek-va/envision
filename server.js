@@ -24,7 +24,7 @@ const oAuth2Client = new google.auth.OAuth2(
 );
 oAuth2Client.setCredentials({ refresh_token: REFRESH_TOKEN });
 
-let name, email, college, phone, paymetId, event, amount;
+let name, email, college, phone, paymetId, event, amount, venue;
 
 const sendMail = async (
   name,
@@ -135,6 +135,7 @@ app.post("/razorpay", async (req, res) => {
   college = req.body.college;
   amount = req.body.amount;
   event = req.body.event;
+  venue = req.body.venue;
 
   // const { name, email, college, paymentId } = req.body;
   const currency = "INR";
