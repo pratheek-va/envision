@@ -89,6 +89,7 @@ const sendMail = async (
       </h1>
       <p style="color: white">${name}</p>
       <p style="color: white">${usn}</p>
+      <p style="color: white">${venue}</p>
       <p style="color: white; font-size: 40px">₹${amount}</p>
       <img src=${qrcode}} />
       

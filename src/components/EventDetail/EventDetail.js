@@ -94,11 +94,17 @@ const EventDetail = (props) => {
     resetFields();
   };
 
-  if (eventType == "TECHNICAL") {
+  if (
+    eventType == "TECHNICAL" ||
+    !extra ||
+    params.eventType != "Non Technical"
+  ) {
     modal = false;
   }
 
   const params = useParams();
+  const extra = params.extra;
+  console.log(extra);
 
   const token = useSelector((state) => state.auth.token);
   return (

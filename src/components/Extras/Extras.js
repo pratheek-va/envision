@@ -57,6 +57,11 @@ const Extras = () => {
                   orgno={item.orgno}
                   image={item.image}
                   rounds={item.rounds ? item.rounds : false}
+                  regfee={item.regfee}
+                  fee={item.fee}
+                  details={item.details}
+                  time={item.time}
+                  date={item.date}
                 ></EventCard>
               ))}
             </div>
