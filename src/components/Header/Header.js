@@ -1,8 +1,13 @@
-import React, { useCallback } from "react";
+import React, { useEffect } from "react";
 import "./Header.css";
-import { NavLink } from "react-router-dom";
-import shortid from "shortid";
-import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { NavLink, Redirect } from "react-router-dom";
+import {
+  getAuth,
+  signInWithPopup,
+  GoogleAuthProvider,
+  signOut,
+  onAuthStateChanged,
+} from "firebase/auth";
 import { useDispatch, useSelector } from "react-redux";
 import app from "../../Firebase/firebase";
 
@@ -11,7 +16,18 @@ const Header = () => {
 
   const token = useSelector((state) => state.auth.token);
 
-  console.log(token);
+  useEffect(() => {
+    const auth = getAuth();
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        console.log(user.uid, user.email);
+        dispatch({ type: "LOGIN", token: user.uid, email: user.email });
+      } else {
+        dispatch({ type: "LOGOUT", token: "", email: "" });
+        console.log("User not signed in");
+      }
+    });
+  });
 
   const signInHandler = async () => {
     const provider = new GoogleAuthProvider();
@@ -23,7 +39,6 @@ const Header = () => {
         const name = result.user.displayName;
         const email = result.user.email;
         dispatch({ type: "LOGIN", token, name, email });
-        localStorage.setItem("creds", JSON.stringify({ token, email, name }));
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -34,10 +49,10 @@ const Header = () => {
   };
 
   const logoutHandler = () => {
-    dispatch({ type: "LOGOUT", token: "", name: "", email: "" });
-    localStorage.removeItem("creds");
+    const auth = getAuth();
+    signOut(auth);
+    dispatch({ type: "LOGOUT", token: "", email: "" });
   };
-
   return (
     <div class="nav">
       <div className="logo">

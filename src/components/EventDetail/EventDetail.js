@@ -2,17 +2,24 @@ import React, { useState } from "react";
 import "./EventDetail.css";
 import useInput from "../../hooks/use-input";
 import { useSelector } from "react-redux";
-
+import Axios from "axios";
 import { useDispatch } from "react-redux";
 import { useParams } from "react-router";
 import { displayRazorPay } from "../../payment";
 
-const isEmail = (value) => value.includes("@");
 const isNotEmpty = (value) => value.trim() !== "";
-const isPhoneNumber = (value) => value.length === 10;
+const isCollege = (value) => value.trim() !== "";
+const isPhoneNumber = (value) => {
+  const phoneno = /^\d{10}$/;
+  if (value.match(phoneno)) {
+    return true;
+  } else return false;
+};
+const isUsn = (value) => (value) => value.trim() !== "";
 
 const EventDetail = (props) => {
-  const [modal, setModal] = useState(true);
+  let modal = true;
+  const [submit, setSubmit] = useState(false);
   const dispatch = useDispatch();
 
   const rules = useSelector((state) => state.detail.rules);
@@ -22,9 +29,16 @@ const EventDetail = (props) => {
   const image = useSelector((state) => state.detail.image);
   const name = useSelector((state) => state.detail.name);
   const rounds = useSelector((state) => state.detail.rounds);
+  const venue = useSelector((state) => state.detail.venue);
+  const regfee = useSelector((state) => state.detail.regfee);
+  const fee = useSelector((state) => state.detail.fee);
+  const details = useSelector((state) => state.detail.details);
 
-  const username = useSelector((state) => state.auth.name);
   const email = useSelector((state) => state.auth.email);
+
+  const changeModal = () => {
+    setSubmit(true);
+  };
 
   const {
     value: nameValue,
@@ -36,38 +50,53 @@ const EventDetail = (props) => {
   } = useInput(isNotEmpty);
 
   const {
-    value: emailValue,
-    isValid: emailIsValid,
-    valueChangeHandler: emailChangeHandler,
-    inputBlurHandler: emailBlurHandler,
-    reset: resetEmail,
-  } = useInput(isEmail);
+    value: college,
+    isValid: collegeIsValid,
+    hasError: collegeHasError,
+    valueChangeHandler: collegeChangeHandler,
+    inputBlurHandler: collegeBlurHandler,
+    reset: resetCollege,
+  } = useInput(isCollege);
 
   const {
     value: phoneNumber,
     isValid: phoneNumberIsValid,
+    hasError: numberHasError,
     valueChangeHandler: phoneNumberHandler,
     inputBlurHandler: phoneNumberBlurHandler,
     reset: resetPhoneNumber,
   } = useInput(isPhoneNumber);
 
+  const {
+    value: usn,
+    isValid: usnIsValid,
+    hasError: usnHasError,
+    valueChangeHandler: usnChangeHandler,
+    inputBlurHandler: usnBlurHandler,
+    reset: resetUsn,
+  } = useInput(isUsn);
+
   const resetFields = () => {
     resetName();
-    resetEmail();
     resetPhoneNumber();
+    resetCollege();
+    resetUsn();
   };
 
   const closeDetails = () => {
     dispatch({ type: "CLOSE" });
   };
 
-  const changeModal = () => {
-    setModal(false);
+  const displayPayment = () => {
+    if (!nameIsValid || !phoneNumberIsValid || !usnIsValid || !collegeIsValid)
+      return;
+    displayRazorPay(nameValue, email, college, phoneNumber, 200, usn, name);
+    resetFields();
   };
 
-  const displayPayment = () => {
-    displayRazorPay(username, email, 9999999999, 200);
-  };
+  if (eventType == "TECHNICAL") {
+    modal = false;
+  }
 
   const params = useParams();
 
@@ -78,7 +107,7 @@ const EventDetail = (props) => {
         <div className="app-modal-title">
           <h5>{name}</h5>
         </div>
-        {(modal && (
+        {(!submit && (
           <div className="app-modal-body">
             <div className="modal-organizer-detail">
               <img
@@ -98,6 +127,8 @@ const EventDetail = (props) => {
                     <li key={i}>{rule}</li>
                   ))}
                 </ol>
+                <p>{regfee}</p>
+                <p>{details}</p>
               </div>
             )) || (
               <div className="modal-event-detail">
@@ -134,6 +165,9 @@ const EventDetail = (props) => {
                     onBlur={nameBlurHandler}
                     onChange={nameChangeHandler}
                   />
+                  {nameHasError && (
+                    <p style={{ color: "red" }}>Enter the valid input</p>
+                  )}
                 </div>
               </div>
               <div className="form-group row">
@@ -152,24 +186,52 @@ const EventDetail = (props) => {
                     onBlur={phoneNumberBlurHandler}
                     onChange={phoneNumberHandler}
                   />
+                  {numberHasError && (
+                    <p style={{ color: "red" }}>Enter the valid input</p>
+                  )}
+                </div>
+              </div>
+
+              <div className="form-group row">
+                <label
+                  for="colFormLabelLg"
+                  className="col-sm-2 col-form-label col-form-label-lg app-form-label"
+                >
+                  College
+                </label>
+                <div className="col-sm-10">
+                  <input
+                    type="text"
+                    className="form-control form-control-lg"
+                    id="colFormLabelLg"
+                    value={college}
+                    onBlur={collegeBlurHandler}
+                    onChange={collegeChangeHandler}
+                  />
+                  {collegeHasError && (
+                    <p style={{ color: "red" }}>Enter the valid input</p>
+                  )}
                 </div>
               </div>
               <div className="form-group row">
                 <label
-                  htmlFor="colFormLabelLg"
+                  for="colFormLabelLg"
                   className="col-sm-2 col-form-label col-form-label-lg app-form-label"
                 >
-                  Email
+                  USN
                 </label>
                 <div className="col-sm-10">
                   <input
-                    type="email"
+                    type="text"
                     className="form-control form-control-lg"
                     id="colFormLabelLg"
-                    value={emailValue}
-                    onBlur={emailBlurHandler}
-                    onChange={emailChangeHandler}
+                    value={usn}
+                    onBlur={usnBlurHandler}
+                    onChange={usnChangeHandler}
                   />
+                  {usnHasError && (
+                    <p style={{ color: "red" }}>Enter the valid input</p>
+                  )}
                 </div>
               </div>
             </form>
@@ -183,9 +245,12 @@ const EventDetail = (props) => {
           >
             Close
           </button>
-          {modal && eventType !== "TECHNICAL" && token && (
-            <button className="app-modal-register" onClick={displayPayment}>
-              Register
+          {token && modal && (
+            <button
+              className="app-modal-register"
+              onClick={!submit ? changeModal : displayPayment}
+            >
+              {!submit ? "Register" : "Submit"}
             </button>
           )}
         </div>

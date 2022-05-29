@@ -88,6 +88,9 @@ body {
 .content-1 {
   align-self: flex-start;
   margin-top: 10rem;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
 }
 
 .title {
@@ -113,6 +116,14 @@ body {
   background: var(--dark-blue);
   padding: 10px 30px;
   border-radius: 10px;
+}
+
+.event-button {
+  font-size: 1.6rem;
+}
+
+.event-button:hover {
+  color: var(--black);
 }
 
 @keyframes float {

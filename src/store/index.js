@@ -1,16 +1,28 @@
 import { configureStore } from "@reduxjs/toolkit";
 
-const modalReducer = (state = { show: false }, action) => {
+const modalReducer = (state = { show: false, input: false }, action) => {
   if (action.type === "SHOW") {
     return { ...state, show: true };
   } else if (action.type === "CLOSE") {
-    return { ...state, show: false };
+    return { ...state, show: false, input: false };
+  } else if (action.type === "INPUT") {
+    return { ...state, input: true };
   }
   return state;
 };
 
 const detailReducer = (
-  state = { rules: [], orgname: "", orgno: "", image: "", name: "" },
+  state = {
+    rules: [],
+    orgname: "",
+    orgno: "",
+    image: "",
+    name: "",
+    venue: "",
+    regfee: "",
+    fee: 0,
+    details: "",
+  },
   action
 ) => {
   if (action.type === "SEND") {
@@ -22,6 +34,10 @@ const detailReducer = (
       image: action.image,
       name: action.name,
       rounds: action.rounds,
+      venue: action.venue,
+      regfee: action.regfee,
+      fee: action.fee,
+      details: action.details,
     };
   }
   return state;
@@ -44,7 +60,6 @@ const eventTypeReducer = (state = { eventType: "" }, action) => {
 
 const currentUser = {
   token: "",
-  name: "",
   email: "",
 };
 
@@ -53,14 +68,12 @@ const authReducer = (state = currentUser, action) => {
     return {
       ...state,
       token: action.token,
-      name: action.name,
       email: action.email,
     };
   } else if (action.type === "LOGOUT") {
     return {
       ...state,
       token: action.token,
-      name: action.name,
       email: action.email,
     };
   }

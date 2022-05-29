@@ -17,6 +17,10 @@ const EventCard = (props) => {
       image: props.image,
       name: props.name,
       rounds: props.rounds,
+      venue: props.venue,
+      regfee: props.regfee,
+      fee: props.fee,
+      details: props.details,
     });
   };
 
@@ -38,7 +42,7 @@ const EventCard = (props) => {
           <h5 className="card-title event-title">{props.name}</h5>
           <p>Venue: {props.venue}</p>
           <p className="date-time">
-            <span>13/4/22</span>
+            <span>15/4/22 | {props.time}</span>
           </p>
           <button className="event-button" onClick={showDetails}>
             Know more

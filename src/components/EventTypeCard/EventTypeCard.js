@@ -12,11 +12,24 @@ const EventTypeCard = (props) => {
   const name = useSelector((state) => state.auth.name);
   const email = useSelector((state) => state.auth.email);
 
-  const displayPayment = () => {
-    displayRazorPay(name, email, 9999999999, 1);
-  };
   const setTypeTechnical = () => {
     dispatch({ type: "TECHNICAL" });
+  };
+
+  const openModal = () => {
+    dispatch({ type: "INPUT" });
+    dispatch({
+      type: "SEND",
+      rules: "",
+      orgname: "",
+      orgno: "",
+      image: "",
+      name: "Technical Event",
+      rounds: "",
+      venue: "",
+      regfee: "",
+      fee: "",
+    });
   };
 
   const setTypeNonTechnical = () => {
@@ -39,7 +52,7 @@ const EventTypeCard = (props) => {
               <p className="event-num">4 Events | INR 100</p>
               <div>
                 {token && (
-                  <button className="event-button" onClick={displayPayment}>
+                  <button className="event-button" onClick={openModal}>
                     Register Now
                   </button>
                 )}

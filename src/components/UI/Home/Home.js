@@ -1,30 +1,28 @@
 import React, { useEffect } from "react";
 import "./Home.css";
+import app from "../../../Firebase/firebase";
 
 import { gsap, Expo, Power3 } from "gsap";
 
-import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import {
+  getAuth,
+  signInWithPopup,
+  GoogleAuthProvider,
+  signOut,
+  onAuthStateChanged,
+} from "firebase/auth";
 import { useDispatch, useSelector } from "react-redux";
-import app from "../../../Firebase/firebase";
 import { NavLink } from "react-router-dom";
 
 const Home = () => {
   const dispatch = useDispatch();
-  const login = localStorage.getItem("creds");
-
-  if (login) {
-    const info = JSON.parse(login);
-    dispatch({
-      type: "LOGIN",
-      token: info.token,
-      name: info.name,
-      email: info.email,
-    });
-  }
 
   const token = useSelector((state) => state.auth.token);
 
-  console.log(token);
+  const logoutHandler = () => {
+    const auth = getAuth();
+    signOut(auth);
+  };
 
   const signInHandler = async () => {
     const provider = new GoogleAuthProvider();
@@ -32,11 +30,10 @@ const Home = () => {
     signInWithPopup(auth, provider)
       .then((result) => {
         const credential = GoogleAuthProvider.credentialFromResult(result);
-        const token = credential.accessToken;
-        const name = result.user.displayName;
+        const token = result.user.uid;
         const email = result.user.email;
-        dispatch({ type: "LOGIN", token, name, email });
-        localStorage.setItem("creds", JSON.stringify({ token, email, name }));
+        console.log(token);
+        dispatch({ type: "LOGIN", token, email });
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -45,6 +42,20 @@ const Home = () => {
         const credential = GoogleAuthProvider.credentialFromError(error);
       });
   };
+
+  useEffect(() => {
+    const auth = getAuth();
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        console.log(user.uid, user.email);
+        dispatch({ type: "LOGIN", token: user.uid, email: user.email });
+      } else {
+        dispatch({ type: "LOGOUT", token: "", email: "" });
+        console.log("User not signed in");
+      }
+    });
+  });
+
   useEffect(() => {
     gsap.from(".logo", {
       duration: 1,
@@ -168,13 +179,16 @@ const Home = () => {
               <NavLink to="/events/all/Non Technical" className="event-button">
                 Non Technical Events
               </NavLink>
-              {!token && (
+              {(!token && (
                 <div className="signin-home">
                   <button onClick={signInHandler}>Sign In With Google</button>
                 </div>
+              )) || (
+                <div className="signin-home">
+                  <button onClick={logoutHandler}>Log out</button>
+                </div>
               )}
             </div>
-            <div className="content-2"></div>
           </div>
         </div>
       </div>

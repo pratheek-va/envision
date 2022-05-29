@@ -3,10 +3,13 @@ import { useParams } from "react-router-dom";
 
 import CulDetails from "../../Details/culturaldetails";
 import archidetails from "../../Details/archidetails";
+import sportJunior from "../../Details/sportsJuniorDetails";
+import sportSenior from "../../Details/sportsSeniorDetails";
 
 import EventCard from "../EventCard/EventCard";
 
 const Extras = () => {
+  const sports = [...sportJunior, ...sportSenior];
   let events = [];
   const eventsArray = [];
 
@@ -20,8 +23,8 @@ const Extras = () => {
       events[i] = CulDetails[i];
     }
   } else if (extra === "SPORTS") {
-    for (let i = 0; i < archidetails.length; i++) {
-      events[i] = archidetails[i];
+    for (let i = 0; i < sports.length; i++) {
+      events[i] = sports[i];
     }
   } else if (extra === "SSA") {
     for (let i = 0; i < archidetails.length; i++) {

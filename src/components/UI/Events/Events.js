@@ -11,6 +11,7 @@ import EEDetails from "../../../Details/ece_eeedetails";
 import ISDetails from "../../../Details/ise_aimldetails";
 import MMDetails from "../../../Details/mech_marinedetails";
 import CulDetails from "../../../Details/culturaldetails";
+import archDetails from "../../../Details/archidetails";
 
 const allDetails = [
   ...CSDetails,
@@ -18,6 +19,8 @@ const allDetails = [
   ...EEDetails,
   ...ISDetails,
   ...MMDetails,
+  ...CulDetails,
+  ...archDetails,
 ];
 
 const Events = () => {
@@ -155,6 +158,11 @@ const Events = () => {
                   orgno={item.orgno}
                   image={item.image}
                   rounds={item.rounds ? item.rounds : false}
+                  regfee={item.regfee}
+                  fee={item.fee}
+                  details={item.details}
+                  time={item.time}
+                  date={item.date}
                 ></EventCard>
               ))}
             </div>

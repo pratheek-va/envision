@@ -1,18 +1,32 @@
-export const displayRazorPay = async (name, email, contact, amount) => {
+export const displayRazorPay = async (
+  name,
+  email,
+  college,
+  phoneNumber,
+  amount,
+  usn,
+  event
+) => {
   const data = await fetch(`http://localhost:5000/razorpay`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      amount: amount,
+      name,
+      email,
+      college,
+      phoneNumber,
+      amount,
+      event,
+      usn,
     }),
   }).then((t) => t.json());
 
   console.log(data);
   // https://envision22.herokuapp.com/razorpay
   var options = {
-    key: "rzp_test_aBWE7tQVBCqwbL",
+    key: "rzp_test_EOVG1JEwo2iuL6",
     amount: data.amount,
     currency: data.currency,
     name: "Technical Event/CS",
@@ -24,8 +38,7 @@ export const displayRazorPay = async (name, email, contact, amount) => {
     prefill: {
       name: name,
       email: email,
-      contact: contact,
-      college: "srinivas institute of technology",
+      contact: phoneNumber,
     },
     notes: {
       address: "Razorpay Corporate Office",

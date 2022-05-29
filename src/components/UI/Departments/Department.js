@@ -27,7 +27,7 @@ const Department = () => {
             image="information Science.jpg"
           ></DepartmentCard>
           <DepartmentCard
-            name="Department Mechanical and Marine Engineering"
+            name="Department of Mechanical and Marine Engineering"
             code={"MM"}
             image="mechanical.jpg"
           ></DepartmentCard>

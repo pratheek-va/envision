@@ -5,9 +5,10 @@ const shortid = require("shortid");
 const Razorpay = require("razorpay");
 const cors = require("cors");
 const bodyParser = require("body-parser");
-
+const qr = require("qrcode");
 const nodemailer = require("nodemailer");
 const { google } = require("googleapis");
+const Axios = require("axios");
 
 const CLIENT_ID =
   "995606782248-0roe6ldp75b9am26bdkl721lkd6s18rq.apps.googleusercontent.com";
@@ -23,7 +24,17 @@ const oAuth2Client = new google.auth.OAuth2(
 );
 oAuth2Client.setCredentials({ refresh_token: REFRESH_TOKEN });
 
-const sendMail = async () => {
+let name, email, college, phone, paymetId, event, amount;
+
+const sendMail = async (
+  name,
+  email,
+  college,
+  phoneNumber,
+  usn,
+  event,
+  paymentId
+) => {
   try {
     const accessToken = await oAuth2Client.getAccessToken();
 
@@ -39,12 +50,49 @@ const sendMail = async () => {
       },
     });
 
+    let data = {
+      name: name,
+      email: email,
+      college: college,
+      phoneNumber: phoneNumber,
+      event: event,
+      use: usn,
+      amount: amount,
+      paymentId: paymentId,
+    };
+
+    let strData = JSON.stringify(data);
+
+    let qrcode;
+
+    qrcode = await qr.toDataURL(strData);
+
+    console.log(qrcode);
+
     const mailOptions = {
       from: "ENVISION <yours authorised email address@gmail.com>",
-      to: "phantomyt971@gmail.com",
-      subject: "Hello from gmail using API",
-      text: "Hello from gmail email using API",
-      html: "<div><h1>Event Name: Code Craft</h1><h1>Name: Pratheek V A</h1><h1>Email: pratheekvaberike@gmail.com</h1></div>",
+      to: email,
+      subject: "Use this ticket to enter the event",
+      text: "Hey there have fun",
+      attachDataUrls: true,
+      html: ` <div
+      style="
+        width: 350px;
+        height: 600px;
+        background-color: black;
+        font-family: 'Montserrat', sans-serif;
+        text-align: center;
+      "
+    >
+      <h1 style="color: white; border-bottom: solid 1px gold; padding: 10px">
+        ${event}
+      </h1>
+      <p style="color: white">${name}</p>
+      <p style="color: white">${usn}</p>
+      <p style="color: white; font-size: 40px">₹${amount}</p>
+      <img src=${qrcode}} />
+      
+    </div>`,
     };
 
     const result = await transport.sendMail(mailOptions);
@@ -71,14 +119,23 @@ app.use(
 const users = [];
 
 const razorpay = new Razorpay({
-  key_id: "rzp_test_aBWE7tQVBCqwbL",
-  key_secret: "jF0gLxTJBoivepyneYzfI5WA",
+  key_id: "rzp_test_EOVG1JEwo2iuL6",
+  key_secret: "KzrVXdNwqpAN4extXi7qktYF",
 });
 
 app.post("/razorpay", async (req, res) => {
   const payment_capture = 1;
   console.log(req.body);
-  const amount = req.body.amount;
+
+  name = req.body.name;
+  email = req.body.email;
+  usn = req.body.usn;
+  phone = req.body.phoneNumber;
+  college = req.body.college;
+  amount = req.body.amount;
+  event = req.body.event;
+
+  // const { name, email, college, paymentId } = req.body;
   const currency = "INR";
 
   const options = {
@@ -101,8 +158,7 @@ app.post("/razorpay", async (req, res) => {
   }
 });
 
-app.post("/verification", (req, res) => {
-  const SECRET = "123456";
+app.post("/verification", async (req, res) => {
   const secret = "12345678";
 
   console.log(req.body);
@@ -117,16 +173,30 @@ app.post("/verification", (req, res) => {
 
   if (digest === req.headers["x-razorpay-signature"]) {
     console.log("request is legit");
-    sendMail()
-      .then((result) => console.log("Email sent...", result))
-      .catch((error) => console.log(error.message));
+
     require("fs").writeFileSync(
       "payment1.json",
       JSON.stringify(req.body, null, 4)
     );
   } else {
-    // pass it
   }
+  Axios.post(
+    "https://envision-d8105-default-rtdb.firebaseio.com/registration.json",
+    {
+      name: name,
+      email: email,
+      college: college,
+      phoneNumber: phone,
+      event: event,
+      use: usn,
+      amount: amount,
+      paymentId: digest,
+    }
+  );
+
+  sendMail(name, email, college, phone, usn, event, amount, "")
+    .then((result) => console.log("Email sent...", result))
+    .catch((error) => console.log(error.message));
   res.json({ status: "ok" });
 });
 

@@ -3,8 +3,6 @@ import { useParams } from "react-router-dom";
 import EventTypeCard from "../EventTypeCard/EventTypeCard";
 
 const EventType = () => {
-  const params = useParams();
-
   return (
     <React.Fragment>
       <div class="container py-4 event-card-container">
