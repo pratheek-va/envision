@@ -29,6 +29,7 @@ const EventTypeCard = (props) => {
       venue: "",
       regfee: "",
       fee: "",
+      key: props.rpkey,
     });
   };
 
@@ -45,7 +46,8 @@ const EventTypeCard = (props) => {
         rounds: "",
         venue: "",
         regfee: "",
-        fee: "",
+        fee: 100,
+        key: props.rpkey,
       });
     }
   };

@@ -19,6 +19,7 @@ const Input = () => {
   const token = useSelector((state) => state.auth.token);
   const email = useSelector((state) => state.auth.email);
   const venue = useSelector((state) => state.detail.venue);
+  const key = useSelector((state) => state.detail.key);
 
   const dispatch = useDispatch();
 
@@ -78,10 +79,11 @@ const Input = () => {
       email,
       college,
       phoneNumber,
-      200,
+      100,
       usn,
       name,
-      venue
+      venue,
+      key
     );
     resetFields();
   };

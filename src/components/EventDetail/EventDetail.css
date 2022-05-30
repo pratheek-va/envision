@@ -148,9 +148,9 @@
   .app-modal-close,
   .app-modal-register {
     font-weight: 500;
-    width: 8rem;
-    height: 5rem;
-    font-size: 1.6rem;
+    width: 7rem;
+    height: 4rem;
+    font-size: 1.2rem;
     margin-right: 2rem;
   }
   .app-modal-detail-text {

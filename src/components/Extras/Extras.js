@@ -19,10 +19,12 @@ const Extras = () => {
 
   if (extra === "CUL") {
     for (let i = 0; i < CulDetails.length; i++) {
+      CulDetails[i].key = keys.envision;
       events[i] = CulDetails[i];
     }
   } else if (extra === "SPORTS") {
     for (let i = 0; i < sports.length; i++) {
+      sports[i].key = keys.envision;
       events[i] = sports[i];
     }
   } else if (extra === "SSA") {
@@ -62,6 +64,7 @@ const Extras = () => {
                   details={item.details}
                   time={item.time}
                   date={item.date}
+                  rpkey={item.key}
                 ></EventCard>
               ))}
             </div>

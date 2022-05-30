@@ -47,9 +47,9 @@ const Department = () => {
             image="department-card-8.jpg"
           ></DepartmentCard>
           <DepartmentCard
-            name="Paper Presentation"
+            name="Paperus"
             code={"PP"}
-            image="department-card-8.jpg"
+            image="paperus.png"
           ></DepartmentCard>
         </div>
       </div>

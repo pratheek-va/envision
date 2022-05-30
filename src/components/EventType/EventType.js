@@ -1,5 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import keys from "../../Details/key/key";
 import EventTypeCard from "../EventTypeCard/EventTypeCard";
 
 const EventType = () => {
@@ -13,6 +14,7 @@ const EventType = () => {
             name={params.departmentName === "PP" ? "IT" : "Technical"}
             code={params.departmentName}
             image={params.departmentName === "PP" ? "itpp.png" : "tech.jpg"}
+            rpkey={keys.envision}
           ></EventTypeCard>
           <EventTypeCard
             code=""
@@ -20,6 +22,7 @@ const EventType = () => {
             image={
               params.departmentName === "PP" ? "nonitpp.png" : "nontech.jpg"
             }
+            rpkey={keys.envision}
           ></EventTypeCard>
         </div>
       </div>
