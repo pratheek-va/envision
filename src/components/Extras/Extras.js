@@ -1,9 +1,8 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-
+import keys from "../../Details/key/key";
 import CulDetails from "../../Details/culturaldetails";
 import archidetails from "../../Details/archidetails";
-import sportJunior from "../../Details/sportsJuniorDetails";
 import sportSenior from "../../Details/sportsSeniorDetails";
 
 import EventCard from "../EventCard/EventCard";
@@ -28,6 +27,7 @@ const Extras = () => {
     }
   } else if (extra === "SSA") {
     for (let i = 0; i < archidetails.length; i++) {
+      archidetails[i].key = keys.ssa;
       events[i] = archidetails[i];
     }
   }

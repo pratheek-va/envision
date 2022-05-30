@@ -43,7 +43,7 @@ const Events = () => {
     let k = 0;
     for (let i = 0; i < CSDetails.length; i++) {
       if (CSDetails[i].type === "NT") {
-        events[k].key = keys.cs;
+        CSDetails[k].key = keys.cs;
         events[k] = CSDetails[i];
         k++;
       }
@@ -52,6 +52,7 @@ const Events = () => {
     let k = 0;
     for (let i = 0; i < EEDetails.length; i++) {
       if (EEDetails[i].type === "NT") {
+        EEDetails[i].key = keys.ec;
         events[k] = EEDetails[i];
         k++;
       }
@@ -60,7 +61,6 @@ const Events = () => {
     let k = 0;
     for (let i = 0; i < EEDetails.length; i++) {
       if (EEDetails[i].type === "T") {
-        events[k].key = keys.ec;
         events[k] = EEDetails[i];
         k++;
       }
@@ -77,6 +77,7 @@ const Events = () => {
     let k = 0;
     for (let i = 0; i < AUDetails.length; i++) {
       if (AUDetails[i].type === "NT") {
+        AUDetails[i] = keys.aa;
         events[k] = AUDetails[i];
         k++;
       }
@@ -85,7 +86,7 @@ const Events = () => {
     let k = 0;
     for (let i = 0; i < ISDetails.length; i++) {
       if (ISDetails[i].type === "NT") {
-        events[k].key = keys.is;
+        ISDetails[i].key = keys.is;
         events[k] = ISDetails[i];
         k++;
       }
@@ -110,6 +111,7 @@ const Events = () => {
     let k = 0;
     for (let i = 0; i < MMDetails.length; i++) {
       if (MMDetails[i].type === "NT") {
+        MMDetails[i] = keys.mm;
         events[k] = MMDetails[i];
         k++;
       }

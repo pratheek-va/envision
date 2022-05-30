@@ -11,6 +11,18 @@ const keys = {
     id: "",
     secret: "",
   },
+  aa: {
+    id: "",
+    secret: "",
+  },
+  mm: {
+    id: "",
+    secret: "",
+  },
+  ssa: {
+    id: "",
+    secret: "",
+  },
 };
 
 export default keys;

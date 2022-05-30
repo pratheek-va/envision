@@ -102,8 +102,10 @@
 
 .app-form-modal {
   display: flex;
+  flex-direction: column;
   height: 75%;
   justify-content: center;
+  align-items: center;
 }
 
 .app-form-label {
@@ -116,6 +118,10 @@
 }
 
 @media only screen and (max-width: 500px) {
+  .app-form-modal {
+    overflow-y: auto;
+  }
+
   .app-modal-body {
     flex-direction: column;
     overflow-y: scroll;
