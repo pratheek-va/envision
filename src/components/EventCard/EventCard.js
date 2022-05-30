@@ -21,7 +21,7 @@ const EventCard = (props) => {
       regfee: props.regfee,
       fee: props.fee,
       details: props.details,
-      key: props.key,
+      key: props.rpkey,
     });
   };
 

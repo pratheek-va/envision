@@ -108,6 +108,7 @@ const EventDetail = (props) => {
   const params = useParams();
   const extra = params.extra;
   console.log(extra);
+  console.log(fee, key);
 
   if (eventType == "TECHNICAL" || extra) {
     modal = false;

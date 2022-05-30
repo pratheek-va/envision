@@ -43,8 +43,9 @@ const Events = () => {
     let k = 0;
     for (let i = 0; i < CSDetails.length; i++) {
       if (CSDetails[i].type === "NT") {
-        CSDetails[k].key = keys.cs;
+        CSDetails[i].key = keys.cs;
         events[k] = CSDetails[i];
+        console.log(events[k]);
         k++;
       }
     }
@@ -169,7 +170,7 @@ const Events = () => {
                   details={item.details}
                   time={item.time}
                   date={item.date}
-                  key={item.key}
+                  rpkey={item.key}
                 ></EventCard>
               ))}
             </div>
