@@ -22,6 +22,7 @@ const detailReducer = (
     regfee: "",
     fee: 0,
     details: "",
+    key: {},
   },
   action
 ) => {
@@ -38,6 +39,7 @@ const detailReducer = (
       regfee: action.regfee,
       fee: action.fee,
       details: action.details,
+      key: action.key,
     };
   }
   return state;

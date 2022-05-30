@@ -103,11 +103,11 @@ const Header = () => {
               <div className="link-item">Gallery</div>
             </NavLink>
           </li>
-          {/* <li className="nav-bar">
+          <li className="nav-bar">
             <NavLink activeClassName="active" to="/sponsors" exact>
               <div className="link-item">Sponsors</div>
             </NavLink>
-          </li> */}
+          </li>
           <li className="nav-bar">
             <NavLink
               activeClassName="active"

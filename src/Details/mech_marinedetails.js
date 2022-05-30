@@ -18,23 +18,6 @@ const mech_marinedetails = [
     image: "roadrash69.png",
   },
   {
-    id: "MM02",
-    name: "Scrolls",
-    type: "T",
-    venue: "Room No: M101",
-    rules: [
-      "Only one participant",
-      "Participant should submit the report before presentation in IEEE format",
-      "Timing for presentation will be 8+2 minutes.",
-    ],
-    details: "",
-    orgname: "M D Thilak Acharya",
-    orgno: "7349022894",
-    fee: 30,
-    time: "10 AM",
-    image: "scrolls.png",
-  },
-  {
     id: "MM03",
     name: "Ace of Race",
     type: "NT",

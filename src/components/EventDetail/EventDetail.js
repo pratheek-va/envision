@@ -33,6 +33,7 @@ const EventDetail = (props) => {
   const regfee = useSelector((state) => state.detail.regfee);
   const fee = useSelector((state) => state.detail.fee);
   const details = useSelector((state) => state.detail.details);
+  const key = useSelector((state) => state.detail.key);
 
   const email = useSelector((state) => state.auth.email);
 
@@ -95,10 +96,11 @@ const EventDetail = (props) => {
       email,
       college,
       phoneNumber,
-      200,
+      fee,
       usn,
       name,
-      venue
+      venue,
+      key
     );
     resetFields();
   };

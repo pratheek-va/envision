@@ -14,7 +14,7 @@ import EventType from "../../EventType/EventType";
 import TAC from "../../TAC/TAC";
 import PrivacyPolicy from "../../PrivacyPolicy/PrivacyPolicy";
 import Extras from "../../Extras/Extras";
-
+import Sponsors from "../Sponsors/Sponsors";
 const Main = () => {
   return (
     <React.Fragment>
@@ -40,9 +40,9 @@ const Main = () => {
       <Route path="/events/:departmentName/:eventType" exact>
         <Events></Events>
       </Route>
-      {/* <Route path="/sponsors" exact>
+      <Route path="/sponsors" exact>
         <Sponsors></Sponsors>
-      </Route> */}
+      </Route>
       <Route path="/aboutus" exact>
         <Aboutus></Aboutus>
       </Route>

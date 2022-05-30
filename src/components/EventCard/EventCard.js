@@ -21,6 +21,7 @@ const EventCard = (props) => {
       regfee: props.regfee,
       fee: props.fee,
       details: props.details,
+      key: props.key,
     });
   };
 
@@ -42,7 +43,9 @@ const EventCard = (props) => {
           <h5 className="card-title event-title">{props.name}</h5>
           <p>Venue: {props.venue}</p>
           <p className="date-time">
-            <span>15/4/22 | {props.time}</span>
+            <span>
+              {props.date} | {props.time}
+            </span>
           </p>
           <button className="event-button" onClick={showDetails}>
             Know more

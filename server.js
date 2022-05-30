@@ -119,11 +119,6 @@ app.use(
 
 const users = [];
 
-const razorpay = new Razorpay({
-  key_id: "rzp_test_EOVG1JEwo2iuL6",
-  key_secret: "KzrVXdNwqpAN4extXi7qktYF",
-});
-
 app.post("/razorpay", async (req, res) => {
   const payment_capture = 1;
   console.log(req.body);
@@ -136,6 +131,18 @@ app.post("/razorpay", async (req, res) => {
   amount = req.body.amount;
   event = req.body.event;
   venue = req.body.venue;
+  keyId = req.body.key.id;
+  keySecret = req.body.key.secret;
+
+  // const razorpay = new Razorpay({
+  //   key_id: "rzp_test_EOVG1JEwo2iuL6",
+  //   key_secret: "KzrVXdNwqpAN4extXi7qktYF",
+  // });
+
+  const razorpay = new Razorpay({
+    key_id: keyId,
+    key_secret: keySecret,
+  });
 
   // const { name, email, college, paymentId } = req.body;
   const currency = "INR";

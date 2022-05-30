@@ -9,7 +9,7 @@ import sportSenior from "../../Details/sportsSeniorDetails";
 import EventCard from "../EventCard/EventCard";
 
 const Extras = () => {
-  const sports = [...sportJunior, ...sportSenior];
+  const sports = [...sportSenior];
   let events = [];
   const eventsArray = [];
 

@@ -12,12 +12,14 @@ const EventType = () => {
           <EventTypeCard
             name={params.departmentName === "PP" ? "IT" : "Technical"}
             code={params.departmentName}
-            image="tech.jpg"
+            image={params.departmentName === "PP" ? "itpp.png" : "tech.jpg"}
           ></EventTypeCard>
           <EventTypeCard
             code=""
             name={params.departmentName === "PP" ? "NON IT" : "Non Technical"}
-            image="nontech.jpg"
+            image={
+              params.departmentName === "PP" ? "nonitpp.png" : "nontech.jpg"
+            }
           ></EventTypeCard>
         </div>
       </div>

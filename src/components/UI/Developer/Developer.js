@@ -7,23 +7,25 @@ const Developer = () => {
       <div class="container py-4 event-card-container">
         <div className="row gx-5">
           <DeveloperCard
-            name="Rakshan B N"
-            role="Full Stack Developer"
-            image="Rakshan-min.jpg"
-          ></DeveloperCard>
-          <DeveloperCard
             name="Pratheek V A"
             role="Full Stack Developer"
             image="Pratheek-min.jpeg"
           ></DeveloperCard>
+
+          <DeveloperCard
+            name="Rakshan B N"
+            role="Front End Developer"
+            image="Rakshan-min.jpg"
+          ></DeveloperCard>
+
           <DeveloperCard
             name="Nikhil Ladwa"
-            role="Full Stack Developer"
+            role="Content Developer"
             image="Nikhil-min.jpg"
           ></DeveloperCard>
           <DeveloperCard
             name="Jaideep"
-            role="Full Stack Developer"
+            role="Associate Developer"
             image="Jaideep-min.jpg"
           ></DeveloperCard>
         </div>

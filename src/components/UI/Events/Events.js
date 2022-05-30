@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Events.css";
+import keys from "../../../Details/key/key";
 
 import EventCard from "../../EventCard/EventCard";
 
@@ -42,6 +43,7 @@ const Events = () => {
     let k = 0;
     for (let i = 0; i < CSDetails.length; i++) {
       if (CSDetails[i].type === "NT") {
+        events[k].key = keys.cs;
         events[k] = CSDetails[i];
         k++;
       }
@@ -58,6 +60,7 @@ const Events = () => {
     let k = 0;
     for (let i = 0; i < EEDetails.length; i++) {
       if (EEDetails[i].type === "T") {
+        events[k].key = keys.ec;
         events[k] = EEDetails[i];
         k++;
       }
@@ -82,6 +85,7 @@ const Events = () => {
     let k = 0;
     for (let i = 0; i < ISDetails.length; i++) {
       if (ISDetails[i].type === "NT") {
+        events[k].key = keys.is;
         events[k] = ISDetails[i];
         k++;
       }
@@ -94,7 +98,7 @@ const Events = () => {
         k++;
       }
     }
-  } else if (departmentName === "MM" && eventType === "Non Technical") {
+  } else if (departmentName === "MM" && eventType === "Technical") {
     let k = 0;
     for (let i = 0; i < MMDetails.length; i++) {
       if (MMDetails[i].type === "T") {
@@ -102,7 +106,7 @@ const Events = () => {
         k++;
       }
     }
-  } else if (departmentName === "MM" && eventType === "Technical") {
+  } else if (departmentName === "MM" && eventType === "Non Technical") {
     let k = 0;
     for (let i = 0; i < MMDetails.length; i++) {
       if (MMDetails[i].type === "NT") {
@@ -163,6 +167,7 @@ const Events = () => {
                   details={item.details}
                   time={item.time}
                   date={item.date}
+                  key={item.key}
                 ></EventCard>
               ))}
             </div>
