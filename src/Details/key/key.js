@@ -12,8 +12,8 @@ const keys = {
     secret: "oJ3N3PzZCTFTWhcdYfze3dRb",
   },
   ec: {
-    id: "",
-    secret: "",
+    id: "rzp_live_bycKzmqU8A6qhc",
+    secret: "GO5k22XtZLWJJhNEaRcB0aUa",
   },
   aa: {
     id: "",
