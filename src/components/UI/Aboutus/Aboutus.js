@@ -4,11 +4,21 @@ import "./Aboutus.css";
 
 import orgDetails from "../../../Details/orgdetails";
 
+const orgArray = [];
+
+function splitArray(array, part) {
+  for (var i = 0; i < array.length; i += part) {
+    orgArray.push(array.slice(i, i + part));
+  }
+}
+
+splitArray(orgDetails, 4);
+
 const Aboutus = () => {
   return (
     <React.Fragment>
       <div className="container py-4">
-        {orgDetails.map((row) => {
+        {orgArray.map((row) => {
           return (
             <div className="row gx-5">
               {row.map((organizer) => {

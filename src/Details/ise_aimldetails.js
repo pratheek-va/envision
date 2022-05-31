@@ -11,7 +11,7 @@ const ise_aimldetails = [
     fee: 20,
     regfee: "Rs. 20 per team",
     time: "Two days (Open for registration)",
-    image: "demo.jpg",
+    image: "cgames.jpeg",
   },
   {
     id: "IS02",
@@ -85,7 +85,7 @@ const ise_aimldetails = [
     //fee: 0,
     fee: 0,
     time: "10 AM",
-    image: "demo.jpg",
+    image: "corporatequiz.jpg",
   },
   {
     id: "IS07",

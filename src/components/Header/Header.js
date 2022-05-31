@@ -121,7 +121,7 @@ const Header = () => {
         </ul>
       </div>
 
-      {/* {(!token && (
+      {(!token && (
         <div className="signin-header">
           <button onClick={signInHandler}>Sign In With Google</button>
         </div>
@@ -129,7 +129,7 @@ const Header = () => {
         <div className="signin-header">
           <button onClick={logoutHandler}>Log out</button>
         </div>
-      )} */}
+      )}
     </div>
   );
 };

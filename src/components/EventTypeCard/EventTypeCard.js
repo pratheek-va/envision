@@ -86,7 +86,7 @@ const EventTypeCard = (props) => {
           {props.name == "Technical" && (
             <div>
               <h5 className="card-title event-type-title">{props.name}</h5>
-              <p className="event-num">4 Events | INR 100</p>
+              <p className="event-num">{props.nevents} Events | INR 100</p>
               <div>
                 {token && (
                   <button className="event-button" onClick={openModal}>

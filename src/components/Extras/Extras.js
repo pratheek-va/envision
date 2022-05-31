@@ -29,7 +29,7 @@ const Extras = () => {
     }
   } else if (extra === "SSA") {
     for (let i = 0; i < archidetails.length; i++) {
-      archidetails[i].key = keys.ssa;
+      archidetails[i].key = keys.envision;
       events[i] = archidetails[i];
     }
   }

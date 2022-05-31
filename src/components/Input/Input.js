@@ -70,7 +70,6 @@ const Input = () => {
     reset: resetUsn,
   } = useInput(isUsn);
 
-  console.log(nameIsValid);
   const displayPayment = () => {
     if (!nameIsValid || !phoneNumberIsValid || !usnIsValid || !collegeIsValid)
       return;

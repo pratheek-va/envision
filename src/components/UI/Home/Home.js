@@ -119,12 +119,15 @@ const Home = () => {
               </h1>
               <p className="tagline">It's time to get your game face on...</p>
               <div className="registration">
-                <a href="#">Registration starts: 1st June</a>
+                <a href="#">
+                  Registrations are open except automobile marine and
+                  electronics non technical events
+                </a>
               </div>
               <NavLink to="/events/all/Non Technical" className="event-button">
                 Non Technical Events
               </NavLink>
-              {/* {(!token && (
+              {(!token && (
                 <div className="signin-home">
                   <button onClick={signInHandler}>Sign In With Google</button>
                 </div>
@@ -132,7 +135,7 @@ const Home = () => {
                 <div className="signin-home">
                   <button onClick={logoutHandler}>Log out</button>
                 </div>
-              )} */}
+              )}
             </div>
           </div>
         </div>

@@ -45,7 +45,6 @@ const Events = () => {
       if (CSDetails[i].type === "NT") {
         CSDetails[i].key = keys.cs;
         events[k] = CSDetails[i];
-        console.log(events[k]);
         k++;
       }
     }
@@ -112,26 +111,10 @@ const Events = () => {
     let k = 0;
     for (let i = 0; i < MMDetails.length; i++) {
       if (MMDetails[i].type === "NT") {
-        MMDetails[i] = keys.mm;
+        MMDetails[i].key = keys.mm;
         events[k] = MMDetails[i];
         k++;
       }
-    }
-  } else if (departmentName === "CUL") {
-    for (let i = 0; i < CulDetails.length; i++) {
-      events[i] = CulDetails[i];
-    }
-  } else if (departmentName === "SPO") {
-    let k = 0;
-    for (let i = 0; i < MMDetails.length; i++) {
-      events[k] = MMDetails[i];
-      k++;
-    }
-  } else if (departmentName === "SSA") {
-    let k = 0;
-    for (let i = 0; i < MMDetails.length; i++) {
-      events[k] = MMDetails[i];
-      k++;
     }
   } else if (departmentName === "all" && eventType === "Non Technical") {
     let k = 0;

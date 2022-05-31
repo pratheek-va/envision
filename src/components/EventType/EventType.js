@@ -15,6 +15,11 @@ const EventType = () => {
             code={params.departmentName}
             image={params.departmentName === "PP" ? "itpp.png" : "tech.jpg"}
             rpkey={keys.envision}
+            nevents={
+              params.departmentName === "AU" && params.departmentName === "IS"
+                ? 4
+                : 3
+            }
           ></EventTypeCard>
           <EventTypeCard
             code=""
