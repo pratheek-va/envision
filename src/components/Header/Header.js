@@ -103,11 +103,11 @@ const Header = () => {
               <div className="link-item">Gallery</div>
             </NavLink>
           </li>
-          <li className="nav-bar">
+          {/* <li className="nav-bar">
             <NavLink activeClassName="active" to="/sponsors" exact>
               <div className="link-item">Sponsors</div>
             </NavLink>
-          </li>
+          </li> */}
           <li className="nav-bar">
             <NavLink
               activeClassName="active"
@@ -121,7 +121,7 @@ const Header = () => {
         </ul>
       </div>
 
-      {(!token && (
+      {/* {(!token && (
         <div className="signin-header">
           <button onClick={signInHandler}>Sign In With Google</button>
         </div>
@@ -129,7 +129,7 @@ const Header = () => {
         <div className="signin-header">
           <button onClick={logoutHandler}>Log out</button>
         </div>
-      )}
+      )} */}
     </div>
   );
 };

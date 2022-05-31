@@ -85,7 +85,6 @@ const Input = () => {
       venue,
       key
     );
-    resetFields();
   };
 
   return (

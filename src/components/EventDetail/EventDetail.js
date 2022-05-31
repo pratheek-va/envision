@@ -102,7 +102,6 @@ const EventDetail = (props) => {
       venue,
       key
     );
-    resetFields();
   };
 
   const params = useParams();
