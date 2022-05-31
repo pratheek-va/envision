@@ -78,7 +78,7 @@ const Events = () => {
     let k = 0;
     for (let i = 0; i < AUDetails.length; i++) {
       if (AUDetails[i].type === "NT") {
-        AUDetails[i] = keys.aa;
+        AUDetails[i].key = keys.aa;
         events[k] = AUDetails[i];
         k++;
       }

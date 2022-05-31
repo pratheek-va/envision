@@ -12,9 +12,9 @@ const PrivacyPolicy = () => {
           <div>
             <p>
               This privacy notice discloses the privacy practices for
-              https://www.envision22.sit.in This privacy notice applies solely
-              to information collected by this website. It will notify you of
-              the following:
+              https://www.envision22.com This privacy notice applies solely to
+              information collected by this website. It will notify you of the
+              following:
               <ol class="indent">
                 <li>
                   What personally identifiable information is collected from you
@@ -96,7 +96,7 @@ const PrivacyPolicy = () => {
             <h3>Orders</h3>
             <p>
               We request information from you on our order form
-              (https://www.envision22.sit.in). To buy from us, you must provide
+              (https://www.envision22.com). To buy from us, you must provide
               contact information (like name and date of birth) and financial
               information (like credit card number, expiration date). This
               information is used for billing purposes and to fullfil your
@@ -124,7 +124,7 @@ const PrivacyPolicy = () => {
             <b class="text-igold">
               If you feel that we are not abiding by this privacy policy, you
               should contact us immediately via telephone at +918792971070 or
-              via envision22.sit@gmail.com
+              via envision.web.official@gmail.com
             </b>
           </div>
         </div>

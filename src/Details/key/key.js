@@ -16,8 +16,8 @@ const keys = {
     secret: "GO5k22XtZLWJJhNEaRcB0aUa",
   },
   aa: {
-    id: "",
-    secret: "",
+    id: "rzp_test_ASzUZjHhkCMfub",
+    secret: "JFtZAVgLQD1Nk9y2uWpw2759",
   },
   mm: {
     id: "",

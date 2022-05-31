@@ -13,16 +13,17 @@ const Developer = () => {
           ></DeveloperCard>
 
           <DeveloperCard
+            name="Nikhil Ladwa"
+            role="Content Developer"
+            image="Nikhil-min.jpg"
+          ></DeveloperCard>
+
+          <DeveloperCard
             name="Rakshan B N"
             role="Front End Developer"
             image="Rakshan-min.jpg"
           ></DeveloperCard>
 
-          <DeveloperCard
-            name="Nikhil Ladwa"
-            role="Content Developer"
-            image="Nikhil-min.jpg"
-          ></DeveloperCard>
           <DeveloperCard
             name="Jaideep"
             role="Associate Developer"
