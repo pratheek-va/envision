@@ -4,8 +4,8 @@ const keys = {
     secret: "",
   },
   cs: {
-    id: "rzp_live_nCO2cXdQWXvINe",
-    secret: "oJ3N3PzZCTFTWhcdYfze3dRb",
+    id: "rzp_live_k2mS0qyOmbHuGU",
+    secret: "7jrBpBQ1n1svZSf6VNlTrUot",
   },
   is: {
     id: "rzp_live_zFc7j3pypnsQ5H",
