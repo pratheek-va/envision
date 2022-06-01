@@ -8,16 +8,16 @@ const keys = {
     secret: "7jrBpBQ1n1svZSf6VNlTrUot",
   },
   is: {
-    id: "rzp_live_zFc7j3pypnsQ5H",
-    secret: "oJ3N3PzZCTFTWhcdYfze3dRb",
+    id: "rzp_live_bYigrIun8Un0sF",
+    secret: "M1GoSosuWdFhmdi4rk31rhTW",
   },
   ec: {
-    id: "",
-    secret: "",
+    id: "rzp_live_bWYDn8NSPY3d2k",
+    secret: "sWdafPN3I8rwjX9oIbAQa54J",
   },
   aa: {
-    id: "",
-    secret: "",
+    id: "rzp_live_RR3HdFg9t5xt6W",
+    secret: "iULpMCnB25ULajbD2trwvV92",
   },
   mm: {
     id: "",
