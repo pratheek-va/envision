@@ -4,7 +4,7 @@ const sportSenior = [
     name: "Mini Fustal",
     date: "07-06-2022, 08-06-2022",
     venue: "College ground",
-    type: "",
+    type: "NT",
     rules: [
       "5 players versus 5 players, one of which will be a Goalkeeper and 2 extra players on each team.",
       "Subs on the fly, like hockey.",
@@ -27,7 +27,7 @@ const sportSenior = [
     name: "Chess",
     date: "14-06-2022",
     venue: "004",
-    type: "",
+    type: "NT",
     rules: [
       "The time limit for the match is 25 + 5 mins.",
       "If the match is not decided within the given time then the winner will be decided on the basis of points of the pieces present on the board.",
@@ -45,7 +45,7 @@ const sportSenior = [
     name: "Online ludo",
     date: "15-06-2022",
     venue: "M203",
-    type: "",
+    type: "NT",
     rules: [
       "It is an individual event.",
       "The use of illegal software/ scripts to get an advantage over another player will cause you immediate disqualification.",
@@ -64,7 +64,7 @@ const sportSenior = [
     name: "Arm Wrestling",
     date: "15-06-2022",
     venue: "Mechanical Parking Block",
-    type: "",
+    type: "NT",
     rules: [
       "It is an individual event.",
       "There is no time limit to a match but a referee may call a halt to the match if one or both competitors are in his opinion not in a fit state to carry on.",
@@ -82,7 +82,7 @@ const sportSenior = [
     name: "BGMI",
     date: "14-06-2022",
     venue: "Mechanical Workshop/Lab",
-    type: "",
+    type: "NT",
     rules: [
       "Team size of 4 members",
       "Teams must have accounts from Asian server",

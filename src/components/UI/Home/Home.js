@@ -119,10 +119,7 @@ const Home = () => {
               </h1>
               <p className="tagline">It's time to get your game face on...</p>
               <div className="registration">
-                <a href="#">
-                  Registrations are open except automobile marine and
-                  electronics non technical events
-                </a>
+                <a href="#">Registrations are open</a>
               </div>
               <NavLink to="/events/all/Non Technical" className="event-button">
                 Non Technical Events

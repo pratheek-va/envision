@@ -13,16 +13,7 @@ import ISDetails from "../../../Details/ise_aimldetails";
 import MMDetails from "../../../Details/mech_marinedetails";
 import CulDetails from "../../../Details/culturaldetails";
 import archDetails from "../../../Details/archidetails";
-
-const allDetails = [
-  ...CSDetails,
-  ...AUDetails,
-  ...EEDetails,
-  ...ISDetails,
-  ...MMDetails,
-  ...CulDetails,
-  ...archDetails,
-];
+import sportSenior from "../../../Details/sportsSeniorDetails";
 
 const Events = () => {
   const params = useParams();
@@ -118,6 +109,40 @@ const Events = () => {
     }
   } else if (departmentName === "all" && eventType === "Non Technical") {
     let k = 0;
+    for (let i = 0; i < CSDetails.length; i++) {
+      CSDetails[i].key = keys.cs;
+    }
+    for (let i = 0; i < EEDetails.length; i++) {
+      EEDetails[i].key = keys.ec;
+    }
+    for (let i = 0; i < AUDetails.length; i++) {
+      AUDetails[i].key = keys.aa;
+    }
+    for (let i = 0; i < MMDetails.length; i++) {
+      MMDetails[i].key = keys.mm;
+    }
+    for (let i = 0; i < ISDetails.length; i++) {
+      ISDetails[i].key = keys.mm;
+    }
+    for (let i = 0; i < CulDetails.length; i++) {
+      CulDetails[i].key = keys.envision;
+    }
+    for (let i = 0; i < archDetails.length; i++) {
+      archDetails[i].key = keys.envision;
+    }
+    for (let i = 0; i < sportSenior.length; i++) {
+      sportSenior[i].key = keys.envision;
+    }
+    const allDetails = [
+      ...CSDetails,
+      ...AUDetails,
+      ...EEDetails,
+      ...ISDetails,
+      ...MMDetails,
+      ...CulDetails,
+      ...archDetails,
+      ...sportSenior,
+    ];
     for (let i = 0; i < allDetails.length; i++) {
       if (allDetails[i].type === "NT") {
         events[k] = allDetails[i];
