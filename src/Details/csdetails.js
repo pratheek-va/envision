@@ -71,7 +71,7 @@ const csdetails = [
     orgname: "Adithya",
     orgno: "9008458345",
     fee: 50,
-    regfee: "Rs. 50 per team",
+    regfee: "Rs. 50 per head",
     date: "15/06/2022",
     time: "9 AM",
     image: "greedyknight.png",
