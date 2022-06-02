@@ -26,6 +26,7 @@
 .app-modal-body {
   display: flex;
   height: 75%;
+  overflow-y: auto;
 }
 
 .modal-organizer-detail,

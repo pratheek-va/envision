@@ -98,7 +98,7 @@ const ise_aimldetails = [
     orgno: "9880803391",
     //fee: 00,
     time: " ",
-    image: "demo.jpg",
+    image: "logintenacity.png",
   },
   {
     id: "IS08",
@@ -114,7 +114,7 @@ const ise_aimldetails = [
     orgno: "7996021151",
     //fee: 0,
     time: " ",
-    image: "demo.jpg",
+    image: "techhunt.png",
   },
   {
     id: "IS09",
@@ -131,7 +131,7 @@ const ise_aimldetails = [
     orgno: "9995441940",
     //fee: 0,
     time: " ",
-    image: "demo.jpg",
+    image: "tracetorch.png",
   },
 ];
 

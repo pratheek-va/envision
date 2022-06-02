@@ -19,7 +19,7 @@ const culturaldetails = [
     orgno: "8431799350",
     fee: 0,
     time: " ",
-    image: "demo.jpg",
+    image: "6.png",
   },
   {
     id: "CU02",
@@ -41,7 +41,7 @@ const culturaldetails = [
     orgno: "9611844479",
     fee: 0,
     time: " ",
-    image: "demo.jpg",
+    image: "8.png",
   },
   {
     id: "CU03",
@@ -60,7 +60,7 @@ const culturaldetails = [
     orgno: "8921026594",
     fee: 0,
     time: " ",
-    image: "demo.jpg",
+    image: "5.png",
   },
   {
     id: "CU04",
@@ -80,7 +80,7 @@ const culturaldetails = [
     orgno: "9633926553",
     fee: 0,
     time: " ",
-    image: "demo.jpg",
+    image: "9.png",
   },
   {
     id: "CU05",
@@ -109,7 +109,7 @@ const culturaldetails = [
     orgno: "7892004902",
     fee: 0,
     time: " ",
-    image: "demo.jpg",
+    image: "7.png",
   },
 ];
 

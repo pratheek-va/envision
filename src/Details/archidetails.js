@@ -17,7 +17,7 @@ const archidetails = [
     date: "14/06/22",
     fee: 50,
     time: "10 AM",
-    image: "demo.jpg",
+    image: "facepainting.png",
   },
   {
     id: "AR02",
