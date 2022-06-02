@@ -10,6 +10,10 @@ const Footer = () => {
       </div>
 
       <div className="text-center p-3 copyright">
+        <NavLink to="/contactus" className={"pp"}>
+          Contact us
+        </NavLink>{" "}
+        |
         <NavLink to="/privacy-policy" className={"pp"}>
           Privacy Policy{" "}
         </NavLink>{" "}

@@ -12,17 +12,17 @@ const Department = () => {
             image="computerScience.jpg"
           ></DepartmentCard>
           <DepartmentCard
-            name="Department of Electronics and Communication Engineering"
+            name="Department of EEE and EC Engineering"
             code="EE"
             image="EEE.jpg"
           ></DepartmentCard>
           <DepartmentCard
-            name="Department of Automobile Engineering"
+            name="Department of Automobile and Aeronautical Engineering"
             code={"AU"}
             image="automobile.jpg"
           ></DepartmentCard>
           <DepartmentCard
-            name="Department of Information Science and Engineering"
+            name="Department of IS and AIML Science and Engineering"
             code={"IS"}
             image="information Science.jpg"
           ></DepartmentCard>

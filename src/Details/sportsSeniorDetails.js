@@ -1,7 +1,7 @@
 const sportSenior = [
   {
     id: "SS01",
-    name: "Mini Fustal",
+    name: "Futsal",
     date: "07-06-2022, 08-06-2022",
     venue: "College ground",
     type: "NT",

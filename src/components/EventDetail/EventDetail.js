@@ -106,8 +106,6 @@ const EventDetail = (props) => {
 
   const params = useParams();
   const extra = params.extra;
-  console.log(extra);
-  console.log(fee, key);
 
   if (eventType == "TECHNICAL" || extra) {
     modal = false;
@@ -130,7 +128,7 @@ const EventDetail = (props) => {
               <h6>Organizer Details</h6>
               <p>{orgname}</p>
               <p>{orgno}</p>
-              <p>envision@gmail.com</p>
+              <p>envision.web.official@gmail.com</p>
             </div>
             {(!rounds && (
               <div className="modal-event-detail">
@@ -251,6 +249,9 @@ const EventDetail = (props) => {
             <h4 style={{ marginTop: "20px" }}>
               A Ticket will be sent to your email address after payment it is
               important to bring that ticket to the event
+            </h4>
+            <h4 style={{ marginTop: "20px" }}>
+              Takes couple of seconds for payment popup
             </h4>
           </div>
         )}

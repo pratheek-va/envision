@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 import { useParams } from "react-router";
 import { useDispatch, useSelector } from "react-redux";
 import { displayRazorPay } from "../../payment";
+import paperus from "../../Details/paperus";
 
 const EventTypeCard = (props) => {
   const dispatch = useDispatch();
@@ -36,19 +37,37 @@ const EventTypeCard = (props) => {
   const openModalPaper = () => {
     {
       dispatch({ type: "SHOW" });
-      dispatch({
-        type: "SEND",
-        rules: [],
-        orgname: "",
-        orgno: "",
-        image: props.image,
-        name: `Technical Event/${props.code}`,
-        rounds: "",
-        venue: "",
-        regfee: "",
-        fee: 100,
-        key: props.rpkey,
-      });
+
+      if (props.name === "IT" || props.name === "NON IT") {
+        dispatch({
+          type: "SEND",
+          rules: props.rules,
+          orgname: props.orgname,
+          orgno: props.orgno,
+          image: props.eimage,
+          name: props.ename,
+          rounds: props.rounds,
+          venue: props.venue,
+          regfee: props.regfee,
+          fee: props.fee,
+          details: props.details,
+          key: props.rpkey,
+        });
+      } else {
+        dispatch({
+          type: "SEND",
+          rules: [],
+          orgname: "",
+          orgno: "",
+          image: props.image,
+          name: `Technical Event/${props.code}`,
+          rounds: "",
+          venue: "",
+          regfee: "",
+          fee: 100,
+          key: props.rpkey,
+        });
+      }
     }
   };
 
@@ -70,7 +89,7 @@ const EventTypeCard = (props) => {
             <div>
               <h5 className="card-title event-type-title">{props.name}</h5>
               <button className="event-button" onClick={openModalPaper}>
-                Register Now
+                Know More
               </button>
             </div>
           )}
@@ -79,7 +98,7 @@ const EventTypeCard = (props) => {
             <div>
               <h5 className="card-title event-type-title">{props.name}</h5>
               <button className="event-button" onClick={openModalPaper}>
-                Register Now
+                Know More
               </button>
             </div>
           )}

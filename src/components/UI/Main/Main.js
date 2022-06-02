@@ -15,6 +15,7 @@ import TAC from "../../TAC/TAC";
 import PrivacyPolicy from "../../PrivacyPolicy/PrivacyPolicy";
 import Extras from "../../Extras/Extras";
 import Sponsors from "../Sponsors/Sponsors";
+import ContactUs from "../../ContactUs/ContactUs";
 const Main = () => {
   return (
     <React.Fragment>
@@ -40,6 +41,11 @@ const Main = () => {
       <Route path="/events/:departmentName/:eventType" exact>
         <Events></Events>
       </Route>
+
+      <Route path="/contactus" exact>
+        <ContactUs></ContactUs>
+      </Route>
+
       <Route path="/sponsors" exact>
         <Sponsors></Sponsors>
       </Route>

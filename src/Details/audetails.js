@@ -14,7 +14,7 @@ const audetails = [
     orgno: "6362282084",
     //fee: 00,
     time: "10 AM",
-    image: "pitstop.jpg",
+    image: "pitstop.png",
   },
   {
     id: "AU02",
@@ -52,7 +52,7 @@ const audetails = [
     orgno: "7619605019",
     //fee: 00,
     time: " ",
-    image: "guerillawarfare.jpg",
+    image: "guerillawarfare.png",
   },
   {
     id: "AU04",
@@ -69,7 +69,7 @@ const audetails = [
     orgno: "7025585179",
     //fee: 00,
     time: "11 AM",
-    image: "waterrocket.jpg",
+    image: "waterrocket.png",
   },
   {
     id: "AU06",
