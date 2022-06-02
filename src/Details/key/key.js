@@ -20,8 +20,8 @@ const keys = {
     secret: "iULpMCnB25ULajbD2trwvV92",
   },
   mm: {
-    id: "",
-    secret: "",
+    id: "rzp_live_7PNQABeVT1Nvzc",
+    secret: "gQW5q1tP0dGk0eRNmdJ1phRC",
   },
 };
 
