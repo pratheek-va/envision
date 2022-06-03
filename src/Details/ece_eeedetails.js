@@ -70,7 +70,7 @@ const ece_eeedetails = [
     //fee: 50,
     date: "14/05/2022 & 15/05/2022",
     time: "10:00 AM",
-    image: "demo.jpg",
+    image: "guessnburst.jpg",
   },
   {
     id: "EE04", ///

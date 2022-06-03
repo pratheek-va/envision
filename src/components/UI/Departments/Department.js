@@ -22,7 +22,7 @@ const Department = () => {
             image="automobile.jpg"
           ></DepartmentCard>
           <DepartmentCard
-            name="Department of IS and AIML Science and Engineering"
+            name="Department of IS and AIML Engineering"
             code={"IS"}
             image="information Science.jpg"
           ></DepartmentCard>
@@ -49,7 +49,7 @@ const Department = () => {
           <DepartmentCard
             name="Paperus"
             code={"PP"}
-            image="paperus.png"
+            image="paperus.jpg"
           ></DepartmentCard>
         </div>
       </div>

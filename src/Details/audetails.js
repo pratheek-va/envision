@@ -20,7 +20,7 @@ const audetails = [
     id: "AU02",
     name: "Slow Bike Race",
     type: "NT",
-    venue: "Bud road beside Mechanical Block",
+    venue: "Bus road beside Mechanical Block",
     rules: [
       "Rules for slow bike race",
       "Rider must wear helmet",
