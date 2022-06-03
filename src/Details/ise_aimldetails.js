@@ -9,9 +9,9 @@ const ise_aimldetails = [
     orgname: "Abdul Khader Anshad",
     orgno: "7706753598",
     fee: 20,
-    regfee: "Rs. 20 per team",
+    regfee: "Rs. 20 per head",
     time: "Two days (Open for registration)",
-    image: "cgames.jpeg",
+    image: "cgames.png",
   },
   {
     id: "IS02",

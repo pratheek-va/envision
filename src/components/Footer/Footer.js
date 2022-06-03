@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="text-center text-white app-footer">
       <div className="container p-4 app-footer-detail">
-        <NavLink to="developerteam">Made with Envision Technical team</NavLink>
+        <NavLink to="/developerteam">Made with Envision Technical team</NavLink>
       </div>
 
       <div className="text-center p-3 copyright">
@@ -18,7 +18,7 @@ const Footer = () => {
           Privacy Policy{" "}
         </NavLink>{" "}
         |
-        <NavLink to="tandconditions" className="tc">
+        <NavLink to="/tandconditions" className="tc">
           Terms and Conditions{" "}
         </NavLink>{" "}
         |

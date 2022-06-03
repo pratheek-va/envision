@@ -93,6 +93,7 @@ const Header = () => {
               <div className="link-item">Events</div>
             </NavLink>
           </li>
+
           <li className="nav-bar">
             <NavLink
               activeClassName="active"
@@ -103,11 +104,17 @@ const Header = () => {
               <div className="link-item">Gallery</div>
             </NavLink>
           </li>
-          {/* <li className="nav-bar">
-            <NavLink activeClassName="active" to="/sponsors" exact>
+
+          <li className="nav-bar">
+            <NavLink
+              activeClassName="active"
+              to="/sponsors"
+              onClick={unCheck}
+              exact
+            >
               <div className="link-item">Sponsors</div>
             </NavLink>
-          </li> */}
+          </li>
           <li className="nav-bar">
             <NavLink
               activeClassName="active"

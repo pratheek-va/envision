@@ -28,9 +28,11 @@ const Main = () => {
       <Route path="/home" exact>
         <Home></Home>
       </Route>
+
       <Route path="/events" exact>
         <Department></Department>
       </Route>
+
       <Route path="/events/:departmentName" exact>
         <EventType></EventType>
       </Route>
@@ -49,18 +51,23 @@ const Main = () => {
       <Route path="/sponsors" exact>
         <Sponsors></Sponsors>
       </Route>
+
       <Route path="/aboutus" exact>
         <Aboutus></Aboutus>
       </Route>
+
       <Route path="/developerteam" exact>
         <Developer></Developer>
       </Route>
+
       <Route path="/gallery" exact>
         <Gallery></Gallery>
       </Route>
+
       <Route path="/tandconditions">
         <TAC></TAC>
       </Route>
+
       <Route path="/privacy-policy">
         <PrivacyPolicy></PrivacyPolicy>
       </Route>

@@ -176,7 +176,7 @@ const orgdetails = [
   // },
   {
     name: "Sanketh k",
-    role: "Envision Co-ordinator",
+    role: "Envision organizing joint secretary",
     phno: "9995295814",
     email: "sankethnayak623@gmail.com",
     image: "26.jpeg",

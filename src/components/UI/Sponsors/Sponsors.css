@@ -12,6 +12,7 @@
 
 .news {
   flex-flow: row wrap;
+  position: relative;
 }
 
 .news .article {
@@ -22,7 +23,6 @@
 }
 .news .article img {
   width: 100%;
-  min-height: 100%;
   transition: 0.2s;
 }
 .news .article figcaption {
@@ -76,11 +76,29 @@
 .news .article:focus img,
 .news .article:active img {
   filter: blur(3px);
-  transform: scale(0.97);
 }
 .news .article:hover figcaption,
 .news .article:focus figcaption,
 .news .article:active figcaption {
   opacity: 1;
   transform: none;
+}
+
+.news .article img {
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 500px) {
+  .sponsor-text {
+    overflow-y: scroll;
+  }
+  .news .article img {
+    width: 30rem;
+    height: auto;
+  }
 }
