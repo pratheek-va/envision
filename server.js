@@ -15,7 +15,7 @@ const CLIENT_ID =
 const CLEINT_SECRET = "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";
 const REDIRECT_URI = "https://developers.google.com/oauthplayground";
 const REFRESH_TOKEN =
-  "1//04DgLV1K2jkMyCgYIARAAGAQSNwF-L9IrCiEkWSSjD4cH2kPiT3FUAzVWBb9GdMhAlrwPiJbEnznx6GoePIxcPn65LKrIUHy5mmk";
+  "1//04s4ufJGn-UgcCgYIARAAGAQSNwF-L9Ir624Sx2OP31YdowtfTscguqv7qXDPBAV6tMJgqP-WSu7V2WXiv5PnEwCMzQxfdbovnR8";
 
 const oAuth2Client = new google.auth.OAuth2(
   CLIENT_ID,
@@ -24,7 +24,7 @@ const oAuth2Client = new google.auth.OAuth2(
 );
 oAuth2Client.setCredentials({ refresh_token: REFRESH_TOKEN });
 
-let name, email, college, phone, paymetId, event, amount, venue;
+let name, email, college, phone, paymentId, event, amount, venue;
 
 const sendMail = async (
   name,
