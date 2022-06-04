@@ -122,6 +122,10 @@ body {
   font-size: 1.6rem;
 }
 
+.event-button-2 {
+  margin-top: 3rem;
+}
+
 .event-button:hover {
   color: var(--black);
 }

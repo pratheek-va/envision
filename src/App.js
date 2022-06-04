@@ -7,6 +7,7 @@ import EventDetail from "./components/EventDetail/EventDetail";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Input from "./components/Input/Input";
+import AdminPage from "./AdminPage/AdminPage";
 
 function App() {
   AOS.init();
@@ -19,6 +20,7 @@ function App() {
       {show && <EventDetail></EventDetail>}
       {input && <Input></Input>}
       <Main></Main>
+      {/* <AdminPage></AdminPage> */}
     </React.Fragment>
   );
 }

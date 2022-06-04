@@ -121,9 +121,20 @@ const Home = () => {
               <div className="registration">
                 <a href="#">Registrations are open</a>
               </div>
-              <NavLink to="/events/all/Non Technical" className="event-button">
-                Non Technical Events
-              </NavLink>
+              <div className="event-button-1">
+                <NavLink
+                  to="/events/all/Non Technical"
+                  className="event-button"
+                >
+                  Non Technical Events
+                </NavLink>
+              </div>
+              <div className="event-button-2">
+                <NavLink to="/events" className="event-button event-button-1">
+                  All Events
+                </NavLink>
+              </div>
+
               {(!token && (
                 <div className="signin-home">
                   <button onClick={signInHandler}>Sign In With Google</button>
@@ -133,6 +144,7 @@ const Home = () => {
                   <button onClick={logoutHandler}>Log out</button>
                 </div>
               )}
+              <h2 style={{ marginTop: "3rem" }}>Singin to register</h2>
             </div>
           </div>
         </div>
