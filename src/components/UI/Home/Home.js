@@ -134,7 +134,9 @@ const Home = () => {
                   All Events
                 </NavLink>
               </div>
-
+              {!token && (
+                <h3 style={{ marginTop: "3rem" }}>Sing in to register</h3>
+              )}
               {(!token && (
                 <div className="signin-home">
                   <button onClick={signInHandler}>Sign In With Google</button>
@@ -143,9 +145,6 @@ const Home = () => {
                 <div className="signin-home">
                   <button onClick={logoutHandler}>Log out</button>
                 </div>
-              )}
-              {!token && (
-              
               )}
             </div>
           </div>

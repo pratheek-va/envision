@@ -33,6 +33,7 @@ const sendMail = async (
   phoneNumber,
   usn,
   event,
+  amount,
   paymentId
 ) => {
   try {
@@ -203,7 +204,7 @@ app.post("/verification", async (req, res) => {
     }
   );
 
-  sendMail(name, email, college, phone, usn, event, amount, "")
+  sendMail(name, email, college, phone, usn, event, amount, digest)
     .then((result) => console.log("Email sent...", result))
     .catch((error) => console.log(error.message));
   res.json({ status: "ok" });
