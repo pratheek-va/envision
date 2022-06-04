@@ -144,7 +144,9 @@ const Home = () => {
                   <button onClick={logoutHandler}>Log out</button>
                 </div>
               )}
-              <h2 style={{ marginTop: "3rem" }}>Singin to register</h2>
+              {!token && (
+                <h2 style={{ marginTop: "3rem" }}>Singin to register</h2>
+              )}
             </div>
           </div>
         </div>
