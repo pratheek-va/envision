@@ -145,7 +145,7 @@ const Home = () => {
                 </div>
               )}
               {!token && (
-                <h2 style={{ marginTop: "3rem" }}>Singin to register</h2>
+              
               )}
             </div>
           </div>
