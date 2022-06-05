@@ -77,13 +77,6 @@ const EventDetail = (props) => {
     reset: resetUsn,
   } = useInput(isUsn);
 
-  const resetFields = () => {
-    resetName();
-    resetPhoneNumber();
-    resetCollege();
-    resetUsn();
-  };
-
   const closeDetails = () => {
     dispatch({ type: "CLOSE" });
   };
@@ -154,6 +147,8 @@ const EventDetail = (props) => {
                     </ol>
                   </div>
                 ))}
+                <p>{regfee}</p>
+                <p style={{ whiteSpace: "pre-line" }}>{details}</p>
               </div>
             )}
           </div>

@@ -13,8 +13,30 @@ import {
 } from "firebase/auth";
 import { useDispatch, useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
+import stepup from "../../../Details/stepupdetails";
+import keys from "../../../Details/key/key";
 
 const Home = () => {
+  const showDetails = () => {
+    dispatch({ type: "SHOW" });
+    dispatch({
+      type: "SEND",
+      rules: stepup[0].rules,
+      orgname: stepup[0].orgname,
+      orgno: stepup[0].orgno,
+      image: "demo.jpg",
+      name: stepup[0].name,
+      rounds: stepup[0].rounds,
+      venue: stepup[0].venue,
+      regfee: stepup[0].regfee,
+      fee: stepup[0].fee,
+      details: stepup[0].details,
+      key: keys.envision,
+    });
+  };
+
+  console.log(stepup[0].details);
+
   const dispatch = useDispatch();
 
   const token = useSelector((state) => state.auth.token);
@@ -73,7 +95,7 @@ const Home = () => {
   }, []);
 
   // Set the date we're counting down to
-  var countDownDate = new Date("June 15, 2022 09:37:25").getTime();
+  var countDownDate = new Date("June 14, 2022 09:00:00").getTime();
 
   // Update the count down every 1 second
   var x = setInterval(function () {
@@ -150,6 +172,25 @@ const Home = () => {
           </div>
         </div>
       </div>
+
+      <main>
+        <div class="mega-card card">
+          <div class="inner">
+            <h2 class="title">STEP UP 2022 (SOLO DANCE BATTLE)</h2>
+            <button className="event-button" onClick={showDetails}>
+              Know more
+            </button>
+          </div>
+        </div>
+        {/* <div class="mega-card card card2">
+          <div class="inner">
+            <h2 class="title">
+              Mit 117 Sachen durch Klugheimschen Basaltgebirge
+            </h2>
+            <time class="subtitle">03. März 2021</time>
+          </div>
+        </div> */}
+      </main>
       {/* <Clock></Clock> */}
       <div className="event-start">
         <h1>EVENT STARTS IN</h1>
