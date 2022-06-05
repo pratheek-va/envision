@@ -191,6 +191,44 @@ const Home = () => {
           </div>
         </div> */}
       </main>
+      <div className="dj">
+        <p className="dj-name">Monsoon Fun Beats</p>
+        <div className="dj-pic">
+          <img src={require("../../../img/monsoon.png")} />
+        </div>
+
+        <p className="dj-rules">Rules</p>
+        <p className="dj-rules">BOYS AND GIRLS WILL BE DANCE SEPARATELY.</p>
+        <p className="dj-rules">
+          IN THE MIDDLE OF THE DANCING GROUND BARRICADES WILL BE KEPT.
+        </p>
+        <p className="dj-rules">
+          BOTH SIDES WILL KEEP 3 OR 4 MEMBERS TO WATCH OVER THE EVENT.
+        </p>
+        <p className="dj-rules">
+          IF THERE ANY MISBEHAVING CAUGHT BY THE STUDENT DECIPLINE INCHARGE WILL
+          BE KEPT FOR THAT WILL ELIMINATE THE STUDENTS FROM THE EVENT.
+        </p>
+        <p className="dj-rules">ID CARD COMPULSORY FOR SIT STUDENT.</p>
+        <p className="dj-rules">
+          PARTICIPATION ID IS COMPULSORY FOR OUTSIDE STUDENTS.
+        </p>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+      </div>
       {/* <Clock></Clock> */}
       <div className="event-start">
         <h1>EVENT STARTS IN</h1>

@@ -180,6 +180,13 @@ const Input = () => {
               </div>
             </div>
           </form>
+          <h4 style={{ marginTop: "20px" }}>
+            A Ticket will be sent to your email address after payment it is
+            important to bring that ticket to the event
+          </h4>
+          <h4 style={{ marginTop: "20px" }}>
+            Takes couple of seconds for payment popup
+          </h4>
         </div>
         <div className="app-modal-footer">
           <button
