@@ -163,7 +163,7 @@ const Input = () => {
                 for="colFormLabelLg"
                 className="col-sm-2 col-form-label col-form-label-lg app-form-label"
               >
-                USN
+                USN/Reg.No
               </label>
               <div className="col-sm-10">
                 <input
