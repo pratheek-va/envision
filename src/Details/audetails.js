@@ -34,7 +34,7 @@ const audetails = [
     orgno: "9902482711",
     fee: 50,
     time: "11:30 AM",
-    image: "demo.jpg",
+    image: "slowbikerace.png",
   },
   {
     id: "AU03",

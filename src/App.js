@@ -20,7 +20,6 @@ function App() {
       {show && <EventDetail></EventDetail>}
       {input && <Input></Input>}
       <Main></Main>
-      {/* <AdminPage></AdminPage> */}
     </React.Fragment>
   );
 }

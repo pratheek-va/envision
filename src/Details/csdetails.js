@@ -34,7 +34,7 @@ const csdetails = [
     orgno: "9611059112",
     //fee: 00,
     date: "15/06/2022",
-    time: "10 AM",
+    time: "9 AM",
     image: "etalash.png",
   },
   {
@@ -51,8 +51,8 @@ const csdetails = [
     orgname: "Rachan N Jadhav",
     orgno: "7012256762",
     //fee: 00,
-    date: "14/06/2022",
-    time: "11 AM",
+    date: "15/06/2022",
+    time: "10 AM",
     image: "riddleobrands.png",
   },
   {
@@ -72,8 +72,8 @@ const csdetails = [
     orgno: "9008458345",
     fee: 50,
     regfee: "Rs. 50 per head",
-    date: "15/06/2022",
-    time: "9 AM",
+    date: "14/06/2022",
+    time: "10 AM",
     image: "greedyknight.png",
   },
 ];

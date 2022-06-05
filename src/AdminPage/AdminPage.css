@@ -4,3 +4,24 @@
 .tableBlue {
   background-color: #cff4fc;
 }
+
+#departments,
+#events {
+  width: 60rem;
+  font-size: 4rem;
+  height: 5rem;
+}
+.selectors {
+  display: flex;
+  justify-content: space-between;
+}
+
+*:focus {
+  outline: none;
+}
+
+.admin-table {
+  font-size: 2rem;
+  color: white;
+  color: var(--grey);
+}
