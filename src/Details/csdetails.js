@@ -76,6 +76,33 @@ const csdetails = [
     time: "10 AM",
     image: "greedyknight.png",
   },
+  {
+    department: "CS",
+    id: "CS06",
+    name: "Valorant",
+    type: "NT",
+    venue: "Room no:007, Main Building",
+    rules: [
+      "A team of 5 players is a must.",
+      "All the teams must choose a captain. This person will be solely responsible for communication with the admins/judges during the tournament.",
+      "Teams must have accounts from the Asian servers.",
+      "A player cannot play for more than one team in the tournament.",
+      "Each round will be a knockout round.",
+      "The maps will be decided on the day of the event.",
+      "The Team Side (Attacking or Defending) will be decided by a coin toss.",
+      "Players must get their own Laptop, keyboard, Headsets/Earphones, mouse and mouse pad but at their own risks. The Organizers won’t be responsible for the damage or loss of your belongings.",
+      "Headsets/Earphones will not be provided.",
+      "Use of any illegal scripts/software will result in disqualification of the team.",
+    ],
+    details: "",
+    orgname: "Adithya",
+    orgno: "9008458345",
+    fee: 150,
+    date: "14/06/22",
+    regfee: "Rs. 150 per head",
+    time: "10:30 AM",
+    image: "valorant.webp",
+  },
 ];
 
 export default csdetails;

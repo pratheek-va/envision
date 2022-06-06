@@ -1,0 +1,11 @@
+.aboutus-text {
+  font-size: 8rem;
+  color: var(--white);
+  text-align: center;
+}
+
+.aboutus-para {
+  font-size: 3rem;
+  text-align: center;
+  color: var(--white);
+}

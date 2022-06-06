@@ -93,6 +93,7 @@
   align-items: center;
   justify-content: flex-end;
   border-top: solid 0.1rem #fca311;
+  background-color: black;
 }
 
 .payment-button {
@@ -169,10 +170,11 @@
     margin-top: 8rem;
   }
   .app-modal-footer {
-    height: 15%;
+    height: 10vh;
     display: flex;
     align-items: center;
     justify-content: flex-end;
     border-top: solid 0.1rem #fca311;
+    background-color: black;
   }
 }

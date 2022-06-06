@@ -18,6 +18,13 @@ const Aboutus = () => {
   return (
     <React.Fragment>
       <div className="container py-4">
+        {/* <div>
+          <p className="aboutus-text">ABOUT US</p>
+          <p className="aboutus-para">
+            Envision is all about the competitive spirit. Providing a platform
+            for the exhibition of utmost creativity.
+          </p>
+        </div> */}
         {orgArray.map((row) => {
           return (
             <div className="row gx-5">

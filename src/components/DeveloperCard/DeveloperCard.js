@@ -19,14 +19,14 @@ const DeveloperCard = (props) => {
           <p>{props.role}</p>
 
           <div className="divMedia">
-            <a href="#" className="media insta">
+            <a href={props.insta} className="media insta">
               <ion-icon name="logo-instagram"></ion-icon>
             </a>
-            <a className="media whatsapp" href="#">
+            <a className="media whatsapp" href={props.wt}>
               <ion-icon name="logo-whatsapp"></ion-icon>
             </a>
-            <a className="media email" href="#">
-              <ion-icon name="mail-outline"></ion-icon>
+            <a className="media email" href={props.li}>
+              <ion-icon name="logo-linkedin"></ion-icon>
             </a>
           </div>
         </div>

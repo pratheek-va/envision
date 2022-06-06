@@ -241,11 +241,11 @@ const EventDetail = (props) => {
                 </div>
               </div>
             </form>
-            <h4 style={{ marginTop: "20px" }}>
+            <h4 style={{ marginTop: "20px", textAlign: "center" }}>
               A Ticket will be sent to your email address after payment it is
               important to bring that ticket to the event
             </h4>
-            <h4 style={{ marginTop: "20px" }}>
+            <h4 style={{ marginTop: "20px", textAlign: "center" }}>
               Takes couple of seconds for payment popup
             </h4>
           </div>

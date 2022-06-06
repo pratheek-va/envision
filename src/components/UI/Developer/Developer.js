@@ -10,24 +10,36 @@ const Developer = () => {
             name="Pratheek V A"
             role="Full Stack Developer"
             image="Pratheek-min.jpeg"
+            insta="https://www.instagram.com/pratheek_va/"
+            wt=""
+            li="https://www.linkedin.com/in/pratheek-v-a-836212241/"
           ></DeveloperCard>
 
           <DeveloperCard
             name="Nikhil Ladwa"
             role="Content Developer"
             image="Nikhil-min.jpg"
+            insta="https://instagram.com/nikhil.ladwa?igshid=YmMyMTA2M2Y="
+            wt=""
+            li=""
           ></DeveloperCard>
 
           <DeveloperCard
             name="Rakshan B N"
             role="Front End Developer"
             image="Rakshan-min.jpg"
+            insta=""
+            wt=""
+            li=""
           ></DeveloperCard>
 
           <DeveloperCard
             name="Jaideep"
             role="Associate Developer"
             image="Jaideep-min.jpg"
+            insta=""
+            wt=""
+            li=""
           ></DeveloperCard>
         </div>
       </div>

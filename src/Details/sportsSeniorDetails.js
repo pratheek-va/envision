@@ -19,6 +19,7 @@ const sportSenior = [
     orgname: "Bopanna HR",
     orgno: "9535639944",
     fee: 100,
+
     time: "9 AM",
     image: "minifustal.png",
   },
@@ -37,6 +38,7 @@ const sportSenior = [
     orgname: "Rachana Shetty",
     orgno: "9448691959",
     fee: 100,
+    regfee: "100 per head",
     time: "9:30 AM",
     image: "chess.png",
   },
@@ -56,6 +58,7 @@ const sportSenior = [
     orgname: "Pretham AG, Saajan Thomas",
     orgno: "7760589811",
     fee: 100,
+    regfee: "100 per head",
     time: "9 AM",
     image: "ludo.png",
   },
