@@ -15,7 +15,7 @@ const isPhoneNumber = (value) => {
     return true;
   } else return false;
 };
-const isUsn = (value) => (value) => value.trim() !== "";
+const isUsn = (value) => value.trim() !== "";
 
 const EventDetail = (props) => {
   let modal = true;
@@ -240,15 +240,14 @@ const EventDetail = (props) => {
                   )}
                 </div>
               </div>
-
-              <h4 style={{ marginTop: "20px" }}>
-                A Ticket will be sent to your email address after payment it is
-                important to bring that ticket to the event
-              </h4>
-              <h4 style={{ marginTop: "20px" }}>
-                Takes couple of seconds for payment popup
-              </h4>
             </form>
+            <h4 style={{ marginTop: "20px" }}>
+              A Ticket will be sent to your email address after payment it is
+              important to bring that ticket to the event
+            </h4>
+            <h4 style={{ marginTop: "20px" }}>
+              Takes couple of seconds for payment popup
+            </h4>
           </div>
         )}
         <div className="app-modal-footer">
