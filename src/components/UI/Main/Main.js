@@ -21,7 +21,7 @@ const Main = () => {
     <React.Fragment>
       <Header></Header>
 
-      <Route path="">
+      <Route path="/" exact>
         <Redirect to="/home" exact />
       </Route>
 

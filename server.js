@@ -210,6 +210,19 @@ app.post("/verification", async (req, res) => {
   res.json({ status: "ok" });
 });
 
+// sendMail(
+//   "Prerana Prabhu N",
+//   "preranaprabhu24@gmail.com",
+//   "Canara Engineering College",
+//   "9400482424",
+//   "4CB18EC049",
+//   "IT Paper Presentation",
+//   100,
+//   "5267b31706fec1b25539f81f4c2232f81dc42ccba8db64537c20425c2500c69e"
+// )
+//   .then((result) => console.log("Email sent...", result))
+//   .catch((error) => console.log(error.message));
+
 app.use(express.static(path.join(__dirname, "/build")));
 app.get("*", (req, res) =>
   res.sendFile(path.join(__dirname, "/build/index.html"))
