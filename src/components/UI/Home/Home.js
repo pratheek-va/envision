@@ -69,7 +69,6 @@ const Home = () => {
     const auth = getAuth();
     onAuthStateChanged(auth, (user) => {
       if (user) {
-        console.log(user.uid, user.email);
         dispatch({ type: "LOGIN", token: user.uid, email: user.email });
       } else {
         dispatch({ type: "LOGOUT", token: "", email: "" });

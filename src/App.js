@@ -7,13 +7,11 @@ import EventDetail from "./components/EventDetail/EventDetail";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Input from "./components/Input/Input";
-import AdminPage from "./AdminPage/AdminPage";
 
 function App() {
   AOS.init();
   const show = useSelector((state) => state.modal.show);
   const input = useSelector((state) => state.modal.input);
-  const token = useSelector((state) => state.auth.token);
 
   return (
     <React.Fragment>

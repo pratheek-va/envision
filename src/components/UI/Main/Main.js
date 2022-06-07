@@ -16,6 +16,7 @@ import PrivacyPolicy from "../../PrivacyPolicy/PrivacyPolicy";
 import Extras from "../../Extras/Extras";
 import Sponsors from "../Sponsors/Sponsors";
 import ContactUs from "../../ContactUs/ContactUs";
+import Modal from "../../Modal/Modal";
 const Main = () => {
   return (
     <React.Fragment>
@@ -36,6 +37,7 @@ const Main = () => {
       <Route path="/events/:departmentName" exact>
         <EventType></EventType>
       </Route>
+
       <Route path="/:extra/events" exact>
         <Extras></Extras>
       </Route>

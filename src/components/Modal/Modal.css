@@ -1,0 +1,39 @@
+.warning-modal {
+  width: 30%;
+  height: 20%;
+  background-color: var(--dark-blue);
+  color: white;
+  font-size: 1.6rem;
+  position: fixed;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  z-index: 2;
+}
+
+.warning-modal-link {
+  color: var(--black);
+  background-color: var(--gold);
+  font-weight: 500;
+  width: 9rem;
+  height: 4rem;
+  padding: 1rem;
+  font-size: 1.2rem;
+}
+.warning-modal-link a:link,
+.warning-modal-link a:visited {
+  text-decoration: none;
+  color: var(--black);
+}
+
+@media only screen and (max-width: 500px) {
+  .warning-modal {
+    width: 80%;
+    height: 20%;
+  }
+}
