@@ -16,7 +16,7 @@ const sponserdetails = [
       "Not only this, the Wizdom team helps most of the students with accommodation support and part time job guidance in international destinations.",
     ],
     link: "https://www.wizdomed.com/",
-    image: "wizdomed.jpeg",
+    image: "Wizdom logo.png",
   },
 ];
 
