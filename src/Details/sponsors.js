@@ -18,6 +18,15 @@ const sponserdetails = [
     link: "https://www.wizdomed.com/",
     image: "Wizdom logo.png",
   },
+  {
+    id: "S03",
+    name: "Bank of Maharashtra",
+    details: [
+      "Bank of Maharashtra is a nationalised bank under the ownership of Ministry of Finance, Government of India. The bank had 29 million customers across the country with 2022 branches as of Mar 2022. It has the largest network of branches of any nationalised bank in the state of Maharashtra.",
+    ],
+    link: "https://bankofmaharashtra.in/",
+    image: "bom.jpeg",
+  },
 ];
 
 export default sponserdetails;
