@@ -4,7 +4,7 @@ const ise_aimldetails = [
     name: "CounterStrike",
     type: "NT",
     venue: "ISE Lab, 4th Floor",
-    rules: ["Individual Event.", "Multiplayer game"],
+    rules: ["Individual Event.", "Multiplayer game", "Version 1.6"],
     details: "",
     orgname: "Abdul Khader Anshad",
     orgno: "7706753598",
