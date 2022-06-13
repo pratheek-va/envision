@@ -223,10 +223,10 @@ app.post("/verification", async (req, res) => {
 //   .then((result) => console.log("Email sent...", result))
 //   .catch((error) => console.log(error.message));
 
-// app.use(express.static(path.join(__dirname, "/build")));
-// app.get("*", (req, res) =>
-//   res.sendFile(path.join(__dirname, "/build/index.html"))
-// );
+app.use(express.static(path.join(__dirname, "/build")));
+app.get("*", (req, res) =>
+  res.sendFile(path.join(__dirname, "/build/index.html"))
+);
 
 app.listen(process.env.PORT || 5000, () => {
   console.log(
