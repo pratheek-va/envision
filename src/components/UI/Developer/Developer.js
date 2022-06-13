@@ -16,15 +16,6 @@ const Developer = () => {
           ></DeveloperCard>
 
           <DeveloperCard
-            name="Nikhil Ladwa"
-            role="Content Developer"
-            image="Nikhil-min.jpg"
-            insta="https://instagram.com/nikhil.ladwa?igshid=YmMyMTA2M2Y="
-            wt=""
-            li=""
-          ></DeveloperCard>
-
-          <DeveloperCard
             name="Rakshan B N"
             role="Front End Developer"
             image="Rakshan-min.jpg"
