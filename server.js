@@ -211,14 +211,14 @@ app.post("/verification", async (req, res) => {
 });
 
 // sendMail(
-//   "Nikhil Ladwa",
-//   "nikhilladwa3@gmail.com",
-//   "SIT",
-//   "6364403953",
-//   "4SN19CS062",
-//   "KALAKUNCHA",
+//   "Daron Jude Machado",
+//   "daronmachado10@gmail.com",
+//   "St.Joseph Engineering College",
+//   "8277160288",
+//   "4SO21CB016",
+//   "Chess",
 //   100,
-//   "5267b31706fec1b25539f81f4c2232f81dc42ccba8db64537c20425c2500c69e"
+//   "pay_JgpV0EiKPTKwpU"
 // )
 //   .then((result) => console.log("Email sent...", result))
 //   .catch((error) => console.log(error.message));

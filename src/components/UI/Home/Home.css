@@ -160,6 +160,24 @@ body {
 }
 
 @media only screen and (max-width: 500px) {
+  .dj-name {
+    color: white;
+    text-align: center;
+    font-size: 3rem;
+  }
+
+  .dj-rules {
+    color: white;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  .dj-pic img {
+    height: 200px;
+    width: auto;
+    text-align: center;
+  }
+
   .content-1 {
     flex: 1;
   }
@@ -170,10 +188,6 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-  }
-
-  .dj {
-    display: none;
   }
 
   .signin-home {
@@ -336,7 +350,6 @@ html {
   background: url(https://i.pinimg.com/originals/44/6e/3b/446e3b79395a287ca32f7977dd83b290.jpg);
   background-size: cover;
   height: 60rem;
-  display: none;
 }
 
 .firefly {
