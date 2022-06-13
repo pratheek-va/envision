@@ -15,7 +15,7 @@ const CLIENT_ID =
 const CLEINT_SECRET = "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";
 const REDIRECT_URI = "https://developers.google.com/oauthplayground";
 const REFRESH_TOKEN =
-  "1//04gHK-t6s6GNpCgYIARAAGAQSNwF-L9IrajCMLiqWNocYVomyrrfuTyMJAEKuhUsbB2a_Cof32pkPS-Joz7Y5Uc1vWtcCtMMWIc0";
+  "1//04s4ufJGn-UgcCgYIARAAGAQSNwF-L9Ir624Sx2OP31YdowtfTscguqv7qXDPBAV6tMJgqP-WSu7V2WXiv5PnEwCMzQxfdbovnR8";
 
 const oAuth2Client = new google.auth.OAuth2(
   CLIENT_ID,
@@ -24,7 +24,7 @@ const oAuth2Client = new google.auth.OAuth2(
 );
 oAuth2Client.setCredentials({ refresh_token: REFRESH_TOKEN });
 
-let name, email, college, phone, paymentId, event, amount, venue;
+let name, email, college, phone, paymentId, event, amount, usn, venue;
 
 const sendMail = async (
   name,
@@ -57,7 +57,7 @@ const sendMail = async (
       college: college,
       phoneNumber: phoneNumber,
       event: event,
-      use: usn,
+      usn: usn,
       amount: amount,
       paymentId: paymentId,
     };
@@ -211,31 +211,17 @@ app.post("/verification", async (req, res) => {
 });
 
 // sendMail(
-//   "Vaibhavi",
-//   "vaibhaviadiga@gmail.com",
-//   "SIT",
-//   "9995126846",
-//   "4SN20IS019",
-//   "Technical Event/IS",
+//   "Prerana Prabhu N",
+//   "preranaprabhu24@gmail.com",
+//   "Canara Engineering College",
+//   "9400482424",
+//   "4CB18EC049",
+//   "IT Paper Presentation",
 //   100,
-//   "pay_JdJIOFPDZjErDZ"
+//   "5267b31706fec1b25539f81f4c2232f81dc42ccba8db64537c20425c2500c69e"
 // )
 //   .then((result) => console.log("Email sent...", result))
 //   .catch((error) => console.log(error.message));
-
-// Axios.post(
-//   "https://envision-d8105-default-rtdb.firebaseio.com/registration.json",
-//   {
-//     name: "Vaibhavi",
-//     email: "vaibhaviadiga@gmail.com",
-//     college: "SIT",
-//     phoneNumber: "9995126846",
-//     event: "Technical Event/IS",
-//     usn: "4SN20IS019",
-//     amount: 100,
-//     paymentId: "pay_JdJIOFPDZjErDZ",
-//   }
-// );
 
 app.use(express.static(path.join(__dirname, "/build")));
 app.get("*", (req, res) =>
