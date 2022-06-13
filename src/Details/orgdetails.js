@@ -282,62 +282,62 @@ const orgdetails = [
   //     image: "25.jpeg"
   // },
 
-  // {
-  //     name: "Danya S Sanil",
-  //     role: "Envision Event Coordinator",
-  //     phno: "9606869121",
-  //     email: "danyassanil2000@gmail.com",
-  //     image: "27.jpeg"
-  // },
-  // {
-  //     name: "Shamith",
-  //     role: "Creative Team",
-  //     phno: "7338509357",
-  //     email: "shamithk1234@gmail.com",
-  //     image: "28.jpeg"
-  // },
-  // {
-  //     name: "Sakshi C Shetty",
-  //     role: "Creative Team",
-  //     phno: "7483712168",
-  //     email: "sakshishetty38@gmail.com",
-  //     image: "29.jpeg"
-  // },
-  // {
-  //     name: "Poorvi Naveen",
-  //     role: "Creative Team",
-  //     phno: "9108102512",
-  //     email: "poorvinaveen7@gmail.com",
-  //     image: "30.jpeg"
-  // },
-  // {
-  //     name: "Vignesh",
-  //     role: "Creative Team",
-  //     phno: "7994426079",
-  //     email: "Vigneeeesh18@gmail.com",
-  //     image: "31.jpeg"
-  // },
-  // {
-  //     name: "Sanju Shaju",
-  //     role: "Creative Team",
-  //     phno: "8589012333",
-  //     email: "sanjushaju@gmail.com",
-  //     image: "32.jpeg"
-  // },
-  // {
-  //     name: "Sourabh Mali",
-  //     role: "Creative Team",
-  //     phno: "9480409757",
-  //     email: "Sourabhmali0408@gmail.com",
-  //     image: "33.jpeg"
-  // },
-  // {
-  //     name: "Danish Khan",
-  //     role: "Creative Team",
-  //     phno: "7026080117",
-  //     email: "dk0999888@gmail.com",
-  //     image: "34.jpeg"
-  // },
+  {
+    name: "Danya S Sanil",
+    role: "Envision Event Coordinator",
+    phno: "9606869121",
+    email: "danyassanil2000@gmail.com",
+    image: "27.jpeg",
+  },
+  {
+    name: "Shamith",
+    role: "Creative Team",
+    phno: "7338509357",
+    email: "shamithk1234@gmail.com",
+    image: "28.jpeg",
+  },
+  {
+    name: "Sakshi C Shetty",
+    role: "Creative Team",
+    phno: "7483712168",
+    email: "sakshishetty38@gmail.com",
+    image: "29.jpeg",
+  },
+  {
+    name: "Poorvi Naveen",
+    role: "Creative Team",
+    phno: "9108102512",
+    email: "poorvinaveen7@gmail.com",
+    image: "30.jpeg",
+  },
+  {
+    name: "Vignesh",
+    role: "Creative Team",
+    phno: "7994426079",
+    email: "Vigneeeesh18@gmail.com",
+    image: "31.jpeg",
+  },
+  {
+    name: "Sanju Shaju",
+    role: "Creative Team",
+    phno: "8589012333",
+    email: "sanjushaju@gmail.com",
+    image: "32.jpeg",
+  },
+  {
+    name: "Sourabh Mali",
+    role: "Creative Team",
+    phno: "9480409757",
+    email: "Sourabhmali0408@gmail.com",
+    image: "33.jpeg",
+  },
+  {
+    name: "Danish Khan",
+    role: "Creative Team",
+    phno: "7026080117",
+    email: "dk0999888@gmail.com",
+    image: "34.jpeg",
+  },
   // {
   //     name: "Keerthan Kumar",
   //     role: "Creative Team",
