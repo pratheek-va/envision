@@ -15,7 +15,7 @@ const CLIENT_ID =
 const CLEINT_SECRET = "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";
 const REDIRECT_URI = "https://developers.google.com/oauthplayground";
 const REFRESH_TOKEN =
-  "1//04s4ufJGn-UgcCgYIARAAGAQSNwF-L9Ir624Sx2OP31YdowtfTscguqv7qXDPBAV6tMJgqP-WSu7V2WXiv5PnEwCMzQxfdbovnR8";
+  "1//04KK5pgyGNTGiCgYIARAAGAQSNwF-L9IrzMlVS0CuWoRQz7cPr_9BCTpjFrNXvjQeb5N_572JFCJJT0P9-z2tmw-dqtBsLHNMP9s";
 
 const oAuth2Client = new google.auth.OAuth2(
   CLIENT_ID,
@@ -211,22 +211,22 @@ app.post("/verification", async (req, res) => {
 });
 
 // sendMail(
-//   "Prerana Prabhu N",
-//   "preranaprabhu24@gmail.com",
-//   "Canara Engineering College",
-//   "9400482424",
-//   "4CB18EC049",
-//   "IT Paper Presentation",
+//   "Nikhil Ladwa",
+//   "nikhilladwa3@gmail.com",
+//   "SIT",
+//   "6364403953",
+//   "4SN19CS062",
+//   "KALAKUNCHA",
 //   100,
 //   "5267b31706fec1b25539f81f4c2232f81dc42ccba8db64537c20425c2500c69e"
 // )
 //   .then((result) => console.log("Email sent...", result))
 //   .catch((error) => console.log(error.message));
 
-app.use(express.static(path.join(__dirname, "/build")));
-app.get("*", (req, res) =>
-  res.sendFile(path.join(__dirname, "/build/index.html"))
-);
+// app.use(express.static(path.join(__dirname, "/build")));
+// app.get("*", (req, res) =>
+//   res.sendFile(path.join(__dirname, "/build/index.html"))
+// );
 
 app.listen(process.env.PORT || 5000, () => {
   console.log(
