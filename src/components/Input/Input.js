@@ -196,7 +196,7 @@ const Input = () => {
           >
             Close
           </button>
-          {token && (
+          {token && false && (
             <button className="app-modal-register" onClick={displayPayment}>
               Submit
             </button>

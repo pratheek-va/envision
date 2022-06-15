@@ -119,7 +119,7 @@ const Home = () => {
     // If the count down is finished, write some text
     if (distance < 0) {
       clearInterval(x);
-      document.getElementById("demo").innerHTML = "EXPIRED";
+      document.getElementById("counter").innerHTML = "00d 00h 00m 00s";
     }
   }, 1000);
   return (

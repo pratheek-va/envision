@@ -258,7 +258,7 @@ const EventDetail = (props) => {
           >
             Close
           </button>
-          {token && modal && (
+          {token && modal && false && (
             <button
               className="app-modal-register"
               onClick={!submit ? changeModal : displayPayment}
