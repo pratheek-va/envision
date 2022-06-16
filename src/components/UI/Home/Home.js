@@ -140,7 +140,7 @@ const Home = () => {
               </h1>
               <p className="tagline">It's time to get your game face on...</p>
               <div className="registration">
-                <a href="#">Registrations are open</a>
+                <a href="#">Fest has ended</a>
               </div>
               <div className="event-button-1">
                 <NavLink
