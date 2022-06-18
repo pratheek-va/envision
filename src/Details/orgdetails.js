@@ -338,13 +338,13 @@ const orgdetails = [
     email: "dk0999888@gmail.com",
     image: "34.jpeg",
   },
-  // {
-  //     name: "Keerthan Kumar",
-  //     role: "Creative Team",
-  //     phno: "8548812391",
-  //     email: "keerthankumarkalladka@gmail.com",
-  //     image: "35.jpeg"
-  // },
+  {
+    name: "Keerthan Kumar",
+    role: "Creative Team",
+    phno: "8548812391",
+    email: "keerthankumarkalladka@gmail.com",
+    image: "35.jpeg",
+  },
   // {
   //     name: "Mohammad Ziyad K S",
   //     role: "Creative Team",
