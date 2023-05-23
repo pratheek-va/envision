@@ -1,7 +1,6 @@
 const sportSenior = [
   // {
   //   id: "SS01",
-  //   name: "Futsal",
   //   date: "07-06-2022, 08-06-2022",
   //   venue: "College ground",
   //   type: "NT",
@@ -24,6 +23,7 @@ const sportSenior = [
   // },
   {
     id: "SS02",
+    department: "SS",
     name: "Chess",
     date: "14-06-2022",
     venue: "004",
@@ -43,6 +43,7 @@ const sportSenior = [
   },
   {
     id: "SS03",
+    department: "SS",
     name: "Online ludo",
     date: "15-06-2022",
     venue: "M203",
@@ -63,6 +64,7 @@ const sportSenior = [
   },
   {
     id: "SS04",
+    department: "SS",
     name: "Arm Wrestling",
     date: "15-06-2022",
     venue: "Mechanical Parking Block",
@@ -81,6 +83,7 @@ const sportSenior = [
   },
   {
     id: "SS05",
+    department: "SS",
     name: "BGMI",
     date: "14-06-2022",
     venue: "Mechanical Workshop/Lab",

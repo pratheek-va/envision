@@ -100,7 +100,7 @@ const EventDetail = (props) => {
   const params = useParams();
   const extra = params.extra;
 
-  if (eventType == "TECHNICAL" || extra) {
+  if (eventType === "TECHNICAL" || extra) {
     modal = false;
   }
 
@@ -117,6 +117,7 @@ const EventDetail = (props) => {
               <img
                 src={require(`../../img/${image}`)}
                 className="modal-image"
+                alt='card'
               />
               <h6>Organizer Details</h6>
               <p>{orgname}</p>
@@ -258,7 +259,7 @@ const EventDetail = (props) => {
           >
             Close
           </button>
-          {token && modal && false && (
+          {token && modal && (
             <button
               className="app-modal-register"
               onClick={!submit ? changeModal : displayPayment}

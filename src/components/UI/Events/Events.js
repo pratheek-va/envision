@@ -1,153 +1,106 @@
 import React, { useState } from "react";
-import "./Events.css";
-import keys from "../../../Details/key/key";
-
-import EventCard from "../../EventCard/EventCard";
-
+import axios from "axios";
+import { useEffect } from "react";
 import { useParams } from "react-router";
 
-import CSDetails from "../../../Details/csdetails";
-import AUDetails from "../../../Details/audetails";
-import EEDetails from "../../../Details/ece_eeedetails";
-import ISDetails from "../../../Details/ise_aimldetails";
-import MMDetails from "../../../Details/mech_marinedetails";
-import CulDetails from "../../../Details/culturaldetails";
-import archDetails from "../../../Details/archidetails";
-import sportSenior from "../../../Details/sportsSeniorDetails";
+import EventCard from "../../EventCard/EventCard";
+import keys from "../../../Details/key/key";
+import "./Events.css";
 
-const Events = () => {
+const Events = (props) => {
   const params = useParams();
   const { departmentName, eventType } = params;
+
+  const [state, setStateData] = useState({
+    eventDetails: []
+  });
+
+  const getEventDetails = async (departmentID) => {
+    const response = await axios.get(`http://localhost:5000/api/v1/events/department/${departmentID}`);
+    return response.data.data.event;
+  }
+
+  const getAllEvents = async (searchText) => {
+    if(!props.searchText) {
+      const response = await axios.get('http://localhost:5000/api/v1/events');
+      return response.data.data.events; 
+    } else {
+      const response = await axios.get(`http://localhost:5000/api/v1/events/search/${searchText}`);
+      setStateData((currentData) => {
+        return {
+          ...currentData,
+          eventDetails: response.data.data.events
+        }
+      });
+    }
+  }
+
+  const getAllDepartmentEvents = async () => {
+    const eventDetails = await getEventDetails(departmentName);
+
+    setStateData((currentData) => {
+      return {
+        ...currentData,
+        eventDetails
+      }
+    });
+  }
+
+  const getEvents = async () => {
+    const eventDetails = await getAllEvents();
+    setStateData((currentData) => {
+      return {
+        ...currentData,
+        eventDetails
+      }
+    });
+  }
+
+  const fetchEvents = () => {
+    if(departmentName === 'all') getEvents();
+    else if(props.searchText) getAllEvents(props.searchText);
+    else getAllDepartmentEvents();
+  }
+
+  useEffect(() => {
+      fetchEvents();
+  }, [props.searchText]);
 
   let events = [];
   const eventsArray = [];
 
-  if (departmentName === "CS" && eventType === "Technical") {
+  if(departmentName === 'all') {
     let k = 0;
-    for (let i = 0; i < CSDetails.length; i++) {
-      if (CSDetails[i].type === "T") {
-        events[k] = CSDetails[i];
+    for (let i = 0; i < state.eventDetails.length; i++) {
+      if (state.eventDetails[i].type === "NT") {
+        state.eventDetails[i].key = keys[departmentName.toLowerCase()];
+        events[k] = state.eventDetails[i];
         k++;
       }
     }
-  } else if (departmentName === "CS" && eventType === "Non Technical") {
+  }else if (eventType === "Technical") {
     let k = 0;
-    for (let i = 0; i < CSDetails.length; i++) {
-      if (CSDetails[i].type === "NT") {
-        CSDetails[i].key = keys.cs;
-        events[k] = CSDetails[i];
+    for (let i = 0; i < state.eventDetails.length; i++) {
+      if (state.eventDetails[i].type === "T") {
+        events[k] = state.eventDetails[i];
         k++;
       }
     }
-  } else if (departmentName === "EE" && eventType === "Non Technical") {
+  } else if (eventType === "Non Technical") {
     let k = 0;
-    for (let i = 0; i < EEDetails.length; i++) {
-      if (EEDetails[i].type === "NT") {
-        EEDetails[i].key = keys.ec;
-        events[k] = EEDetails[i];
+    for (let i = 0; i < state.eventDetails.length; i++) {
+      if (state.eventDetails[i].type === "NT") {
+        state.eventDetails[i].key = keys[departmentName.toLowerCase()];
+        events[k] = state.eventDetails[i];
         k++;
       }
     }
-  } else if (departmentName === "EE" && eventType === "Technical") {
+  }else if(props.searchText){
     let k = 0;
-    for (let i = 0; i < EEDetails.length; i++) {
-      if (EEDetails[i].type === "T") {
-        events[k] = EEDetails[i];
-        k++;
-      }
-    }
-  } else if (departmentName === "AU" && eventType === "Technical") {
-    let k = 0;
-    for (let i = 0; i < AUDetails.length; i++) {
-      if (AUDetails[i].type === "T") {
-        events[k] = AUDetails[i];
-        k++;
-      }
-    }
-  } else if (departmentName === "AU" && eventType === "Non Technical") {
-    let k = 0;
-    for (let i = 0; i < AUDetails.length; i++) {
-      if (AUDetails[i].type === "NT") {
-        AUDetails[i].key = keys.aa;
-        events[k] = AUDetails[i];
-        k++;
-      }
-    }
-  } else if (departmentName === "IS" && eventType === "Non Technical") {
-    let k = 0;
-    for (let i = 0; i < ISDetails.length; i++) {
-      if (ISDetails[i].type === "NT") {
-        ISDetails[i].key = keys.is;
-        events[k] = ISDetails[i];
-        k++;
-      }
-    }
-  } else if (departmentName === "IS" && eventType === "Technical") {
-    let k = 0;
-    for (let i = 0; i < ISDetails.length; i++) {
-      if (ISDetails[i].type === "T") {
-        events[k] = ISDetails[i];
-        k++;
-      }
-    }
-  } else if (departmentName === "MM" && eventType === "Technical") {
-    let k = 0;
-    for (let i = 0; i < MMDetails.length; i++) {
-      if (MMDetails[i].type === "T") {
-        events[k] = MMDetails[i];
-        k++;
-      }
-    }
-  } else if (departmentName === "MM" && eventType === "Non Technical") {
-    let k = 0;
-    for (let i = 0; i < MMDetails.length; i++) {
-      if (MMDetails[i].type === "NT") {
-        MMDetails[i].key = keys.mm;
-        events[k] = MMDetails[i];
-        k++;
-      }
-    }
-  } else if (departmentName === "all" && eventType === "Non Technical") {
-    let k = 0;
-    for (let i = 0; i < CSDetails.length; i++) {
-      CSDetails[i].key = keys.cs;
-    }
-    for (let i = 0; i < EEDetails.length; i++) {
-      EEDetails[i].key = keys.ec;
-    }
-    for (let i = 0; i < AUDetails.length; i++) {
-      AUDetails[i].key = keys.aa;
-    }
-    for (let i = 0; i < MMDetails.length; i++) {
-      MMDetails[i].key = keys.mm;
-    }
-    for (let i = 0; i < ISDetails.length; i++) {
-      ISDetails[i].key = keys.mm;
-    }
-    for (let i = 0; i < CulDetails.length; i++) {
-      CulDetails[i].key = keys.envision;
-    }
-    for (let i = 0; i < archDetails.length; i++) {
-      archDetails[i].key = keys.envision;
-    }
-    for (let i = 0; i < sportSenior.length; i++) {
-      sportSenior[i].key = keys.envision;
-    }
-    const allDetails = [
-      ...CSDetails,
-      ...AUDetails,
-      ...EEDetails,
-      ...ISDetails,
-      ...MMDetails,
-      ...CulDetails,
-      ...archDetails,
-      ...sportSenior,
-    ];
-    for (let i = 0; i < allDetails.length; i++) {
-      if (allDetails[i].type === "NT") {
-        events[k] = allDetails[i];
-        k++;
-      }
+    for (let i = 0; i < state.eventDetails.length; i++) {
+      state.eventDetails[i].key = keys[state.eventDetails[i].department.toLowerCase()];
+      events[k] = state.eventDetails[i];
+      k++;
     }
   }
 
@@ -158,6 +111,7 @@ const Events = () => {
   }
 
   splitArray(events, 3);
+
   return (
     <React.Fragment>
       <div class="container px-5 event-card-container">
@@ -166,6 +120,8 @@ const Events = () => {
             <div className="row">
               {row.map((item) => (
                 <EventCard
+                  key={item._id}
+                  id={item._id}
                   name={item.name}
                   venue={item.venue}
                   rules={item.rules}
@@ -179,6 +135,7 @@ const Events = () => {
                   time={item.time}
                   date={item.date}
                   rpkey={item.key}
+                  fetchEvents={fetchEvents}
                 ></EventCard>
               ))}
             </div>

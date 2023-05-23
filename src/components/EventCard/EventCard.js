@@ -1,11 +1,13 @@
 import React from "react";
-import "./EventCard.css";
+import { useDispatch, useSelector } from "react-redux";
+import MaterialIcon from 'material-icons-react';
+import axios from "axios";
 
-import { useDispatch } from "react-redux";
-import { NavLink } from "react-router-dom";
+import "./EventCard.css";
 
 const EventCard = (props) => {
   const dispatch = useDispatch();
+  const email = useSelector((state) => state.auth.email);
 
   const showDetails = () => {
     dispatch({ type: "SHOW" });
@@ -25,6 +27,26 @@ const EventCard = (props) => {
     });
   };
 
+  const deleteEvent = async (eventId) => {
+    await axios.delete(`http://localhost:5000/api/v1/events/${eventId}`);
+    dispatch({ type: 'CONFIRM_CLOSE' });
+    props.fetchEvents();
+  }
+
+  const updateEvent = async (formData, eventId) => {
+    await axios.patch(`http://localhost:5000/api/v1/events/${eventId}`, formData);
+    dispatch({type: 'FORM_CLOSE'});
+    props.fetchEvents();
+  }
+
+  const updateFormModal = () => {
+    dispatch({ type: 'FORM_OPEN', id: props.id, onClick: updateEvent});
+  }
+
+  const deleteConfirmModal = () => {
+    dispatch({ type: 'CONFIRM', id: props.id, title: 'Delete Event', onClick: deleteEvent, confirmationText: 'Do you want to delete this event'});
+  };
+
   return (
     <div
       className="col-md-4 px-5 gy-5"
@@ -34,12 +56,16 @@ const EventCard = (props) => {
       data-aos-offset="0"
     >
       <div className="card event-card">
-        <img
-          className="card-img-top"
-          src={require(`../../img/${props.image}`)}
-          alt="Card image cap"
-        />
+        <img className="card-img-top" src={require(`../../img/${props.image}`)} alt='card'/>
         <div className="card-body card-details">
+          {email === 'pratheekvaberike@gmail.com' && <div className="button-container">
+            <div style={{cursor: 'pointer'}}>
+              <MaterialIcon icon={"delete"} color="red" onClick={deleteConfirmModal}/>
+            </div>
+            <div style={{cursor: 'pointer'}}>
+              <MaterialIcon icon={"edit"} onClick={updateFormModal} color="#fff"/>
+            </div>
+          </div>}
           <h5 className="card-title event-title">{props.name}</h5>
           <p>Venue: {props.venue}</p>
           <p className="date-time">

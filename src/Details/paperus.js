@@ -1,6 +1,7 @@
 const paperus = [
   {
     id: "PP01",
+    department: "PP",
     name: "IT Paper Presentation",
     type: "T",
     venue: "Room No: 001, Main Block",
@@ -22,6 +23,7 @@ const paperus = [
   },
   {
     id: "PP02",
+    department: "PP",
     name: "Non IT Paper Presentation",
     type: "T",
     venue: "Room No: M101",

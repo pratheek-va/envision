@@ -1,6 +1,7 @@
 const culturaldetails = [
   {
     id: "CU01",
+    department: "CUL",
     name: "GAANA",
     type: "NT",
     venue: "Seminar Hall",
@@ -25,6 +26,7 @@ const culturaldetails = [
   },
   {
     id: "CU02",
+    department: "CUL",
     name: "THANDAVA",
     type: "NT",
     venue: "Auditorium",
@@ -49,6 +51,7 @@ const culturaldetails = [
   },
   {
     id: "CU03",
+    department: "CUL",
     name: "KALA-KUNCHA",
     type: "NT",
     venue: "Room No: 102, Architecture Block",
@@ -70,6 +73,7 @@ const culturaldetails = [
   },
   {
     id: "CU04",
+    department: "CUL",
     name: "NAVARASA",
     type: "NT",
     venue: "Auditorium",
@@ -92,6 +96,7 @@ const culturaldetails = [
   },
   {
     id: "CU05",
+    department: "CUL",
     name: "Mr/Ms ENVISION",
     type: "NT",
     venue: "Seminar Hall",

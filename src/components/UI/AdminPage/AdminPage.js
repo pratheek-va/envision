@@ -1,15 +1,15 @@
 import React, { useState } from "react";
-import "./AdminPage.css";
+import "./../../../AdminPage/AdminPage.css";
 import Axios from "axios";
 
-import CSDetails from "../Details/csdetails";
-import ISDetails from "../Details/ise_aimldetails";
-import MMDetails from "../Details/mech_marinedetails";
-import AUDetails from "../Details/audetails";
-import EEDetails from "../Details/ece_eeedetails";
-import ADetails from "../Details/archidetails";
-import CUDetails from "../Details/culturaldetails";
-import SPDetails from "../Details/sportsSeniorDetails";
+import CSDetails from "./../../../Details/csdetails";
+import ISDetails from "./../../../Details/ise_aimldetails";
+import MMDetails from "./../../../Details/mech_marinedetails";
+import AUDetails from "./../../../Details/audetails";
+import EEDetails from "./../../../Details/ece_eeedetails";
+import ADetails from "./../../../Details/archidetails";
+import CUDetails from "./../../../Details/culturaldetails";
+import SPDetails from "./../../../Details/sportsSeniorDetails";
 
 const registration = [];
 
@@ -102,6 +102,7 @@ const AdminPage = () => {
             <option value="CUL">Cultural</option>
             <option value="SR">Sports</option>
           </select>
+
           <select id="events" value={event} onChange={eventChangeHandler}>
             <option value="">Select Event</option>
             <option

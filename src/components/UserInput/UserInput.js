@@ -1,5 +1,6 @@
 import React from "react";
 import useInput from "../../hooks/use-input";
+import './UserInput.css';
 
 const isNotEmpty = (value) => value.trim() !== "";
 const isCollege = (value) => value.trim() !== "";
@@ -47,7 +48,7 @@ const UserInput = () => {
   return (
     <div className="app-form-modal">
       <form className="app-form">
-        <div className="form-group row">
+        <div className="form-group form-control-input row">
           <label
             for="colFormLabelLg"
             className="col-sm-2 col-form-label col-form-label-lg app-form-label"
@@ -66,7 +67,7 @@ const UserInput = () => {
             {!nameIsValid && <p style={"color:red"}>Enter the valid input</p>}
           </div>
         </div>
-        <div className="form-group row">
+        <div className="form-group form-control-input row">
           <label
             for="colFormLabelLg"
             className="col-sm-2 col-form-label col-form-label-lg app-form-label"
@@ -86,7 +87,7 @@ const UserInput = () => {
           </div>
         </div>
 
-        <div className="form-group row">
+        <div className="form-group form-control-input row">
           <label
             for="colFormLabelLg"
             className="col-sm-2 col-form-label col-form-label-lg app-form-label"
@@ -107,7 +108,7 @@ const UserInput = () => {
             )}
           </div>
         </div>
-        <div className="form-group row">
+        <div className="form-group form-control-input row">
           <label
             for="colFormLabelLg"
             className="col-sm-2 col-form-label col-form-label-lg app-form-label"

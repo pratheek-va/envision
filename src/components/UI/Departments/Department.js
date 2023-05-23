@@ -13,7 +13,7 @@ const Department = () => {
           ></DepartmentCard>
           <DepartmentCard
             name="Department of EEE and EC Engineering"
-            code="EE"
+            code="ECE"
             image="EEE.jpg"
           ></DepartmentCard>
           <DepartmentCard
@@ -33,7 +33,7 @@ const Department = () => {
           ></DepartmentCard>
           <DepartmentCard
             name="School Of Architecture"
-            code={"SSA"}
+            code={"ARCH"}
             image="department-card-9.jpg"
           ></DepartmentCard>
           <DepartmentCard
@@ -43,7 +43,7 @@ const Department = () => {
           ></DepartmentCard>
           <DepartmentCard
             name="Sports"
-            code={"SPORTS"}
+            code={"SS"}
             image="department-card-8.jpg"
           ></DepartmentCard>
           <DepartmentCard

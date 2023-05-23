@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import "./Header.css";
-import { NavLink, Redirect } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import MaterialIcon from 'material-icons-react';
 import {
   getAuth,
   signInWithPopup,
@@ -9,12 +10,19 @@ import {
   onAuthStateChanged,
 } from "firebase/auth";
 import { useDispatch, useSelector } from "react-redux";
-import app from "../../Firebase/firebase";
+import axios from "axios";
+import { useState } from "react";
 
-const Header = () => {
+const Header = (props) => {
+  const [state, setStateData] = useState({search: ''});
   const dispatch = useDispatch();
 
   const token = useSelector((state) => state.auth.token);
+  const email = useSelector((state) => state.auth.email);
+
+  const onSearchApplied = (e) => {
+    props.setSearch(e.target.value);
+  }
 
   useEffect(() => {
     const auth = getAuth();
@@ -57,6 +65,17 @@ const Header = () => {
     signOut(auth);
     dispatch({ type: "LOGOUT", token: "", email: "" });
   };
+
+  const createEvent = async (formData, eventId) => {
+    console.log(formData);
+    await axios.post(`http://localhost:5000/api/v1/events`, formData);
+    dispatch({type: 'FORM_CLOSE'});
+  };
+
+  const createEventModal = () => {
+    dispatch({ type: 'FORM_OPEN', onClick: createEvent});
+  };
+
   return (
     <div class="nav">
       <div className="logo">
@@ -125,6 +144,19 @@ const Header = () => {
               <div className="link-item">About us</div>
             </NavLink>
           </li>
+          {email === 'pratheekvaberike@gmail.com' && <li className="nav-bar">
+            <NavLink
+              activeClassName="active"
+              to="/admin"
+              onClick={unCheck}
+              exact
+            >
+              <div className="link-item">Admin</div>
+            </NavLink>
+          </li>}
+          <li className="nav-bar">
+            <input type='search' placeholder="Search Event" onChange={onSearchApplied} style={{padding: '0.2rem', fontWeight: 'bold'}}/>
+          </li>
         </ul>
       </div>
 
@@ -133,9 +165,17 @@ const Header = () => {
           <button onClick={signInHandler}>Sign In With Google</button>
         </div>
       )) || (
+        email === 'pratheekvaberike@gmail.com' && <div style={{ 
+          display: 'flex', 
+          flexDirection: 'row', 
+          justifyContent: 'space-between',
+          alignItems: 'center'
+        }}><div style={{ cursor: 'pointer', marginRight: '2rem' }} className="signin-header">
+          <MaterialIcon icon={"add"} color="white" onClick={createEventModal}/>
+        </div>
         <div className="signin-header">
           <button onClick={logoutHandler}>Log out</button>
-        </div>
+        </div></div>
       )}
     </div>
   );

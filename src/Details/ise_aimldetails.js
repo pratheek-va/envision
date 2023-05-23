@@ -1,6 +1,7 @@
 const ise_aimldetails = [
   {
     id: "IS01",
+    department: "IS",
     name: "CounterStrike",
     type: "NT",
     venue: "ISE Lab, 4th Floor",
@@ -16,6 +17,7 @@ const ise_aimldetails = [
   },
   {
     id: "IS02",
+    department: "IS",
     name: "Cyclopedia",
     type: "NT",
     venue: "College Ground.",
@@ -31,6 +33,7 @@ const ise_aimldetails = [
   },
   {
     id: "IS03",
+    department: "IS",
     name: "Photo Montage",
     type: "NT",
     venue: "Room No: 404, Main Building",
@@ -46,6 +49,7 @@ const ise_aimldetails = [
   },
   {
     id: "IS04",
+    department: "IS",
     name: "Pyramid Break",
     type: "O",
     venue: "Butterfly Garden",
@@ -60,6 +64,7 @@ const ise_aimldetails = [
   },
   {
     id: "IS05",
+    department: "IS",
     name: "Ring Toss",
     type: "O",
     venue: "Butterfly Garden",
@@ -74,6 +79,7 @@ const ise_aimldetails = [
   },
   {
     id: "IS06",
+    department: "IS",
     name: "Corporate Quiz",
     type: "T",
     venue: "Room No: 401, 4th Floor",
@@ -93,6 +99,7 @@ const ise_aimldetails = [
   },
   {
     id: "IS07",
+    department: "IS",
     name: "Logic Tenacity",
     type: "T",
     venue: "ISE Lab, 4th Floor",
@@ -107,6 +114,7 @@ const ise_aimldetails = [
   },
   {
     id: "IS08",
+    department: "IS",
     name: "Tech Hunt",
     type: "T",
     venue: "4th Floor",
@@ -124,6 +132,7 @@ const ise_aimldetails = [
   },
   {
     id: "IS09",
+    department: "IS",
     name: "Trace Torch",
     type: "T",
     venue: "Badminton court",

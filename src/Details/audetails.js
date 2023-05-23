@@ -1,6 +1,7 @@
 const audetails = [
   {
     id: "AU01",
+    department: "AU",
     name: "Pit Stop",
     type: "T",
     venue: "AutoMobile Workshop",
@@ -19,6 +20,7 @@ const audetails = [
   },
   {
     id: "AU02",
+    department: "AU",
     name: "Slow Bike Race",
     type: "NT",
     venue: "Mud road beside Mechanical Block",
@@ -41,6 +43,7 @@ const audetails = [
   },
   {
     id: "AU03",
+    department: "AU",
     name: "Guerilla Warfare",
     venue: "Yoga center, Main Block 2nd floor",
     type: "T",
@@ -60,6 +63,7 @@ const audetails = [
   },
   {
     id: "AU04",
+    department: "AU",
     name: "Water Rocket",
     type: "T",
     venue: "College Ground",
@@ -78,6 +82,7 @@ const audetails = [
   },
   {
     id: "AU06",
+    department: "AU",
     name: "Super 60",
     type: "T",
     venue: "Room No: M503",

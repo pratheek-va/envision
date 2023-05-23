@@ -9,6 +9,163 @@ const qr = require("qrcode");
 const nodemailer = require("nodemailer");
 const { google } = require("googleapis");
 const Axios = require("axios");
+const mongoose = require('mongoose');
+
+const eventRouter = require('./routes/eventRoutes');
+const Event = require("./models/eventModel");
+
+const csdetails = [
+  {
+    id: "IS01",
+    department: "IS",
+    name: "CounterStrike",
+    type: "NT",
+    venue: "ISE Lab, 4th Floor",
+    rules: ["Individual Event.", "Multiplayer game", "Version 1.6"],
+    details: "",
+    orgname: "Abdul Khader Anshad",
+    orgno: "7706753598",
+    fee: 20,
+    regfee: "Rs. 20 per head",
+    date: "15/06/22",
+    time: "11 AM - 1 PM",
+    image: "cgames.png",
+  },
+  {
+    id: "IS02",
+    department: "IS",
+    name: "Cyclopedia",
+    type: "NT",
+    venue: "College Ground.",
+    rules: ["Solo event.", "Slow cycling race"],
+    details: "",
+    orgname: "Mohammad Thousif",
+    orgno: "9845631414",
+    fee: 20,
+    regfee: "Rs. 20 per head",
+    date: "14/06/22",
+    time: "11 AM - 1 PM",
+    image: "cyclopedia.png",
+  },
+  {
+    id: "IS03",
+    department: "IS",
+    name: "Photo Montage",
+    type: "NT",
+    venue: "Room No: 404, Main Building",
+    rules: ["2 members in a team.", "Solve the puzzle"],
+    details: "",
+    orgname: " Ashritha J Alva",
+    orgno: "9480230525",
+    fee: 20,
+    date: "14/06/22",
+    regfee: "Rs. 20 per team",
+    time: "11 AM - 12:00 PM",
+    image: "photomontage.png",
+  },
+  {
+    id: "IS04",
+    department: "IS",
+    name: "Pyramid Break",
+    type: "O",
+    venue: "Butterfly Garden",
+    rules: [" ", " "],
+    details: "",
+    orgname: "Namrtha",
+    orgno: "9497340698",
+    fee: 20,
+    regfee: "Rs. 20 per team",
+    time: " ",
+    image: "pyramidbreak.png",
+  },
+  {
+    id: "IS05",
+    department: "IS",
+    name: "Ring Toss",
+    type: "O",
+    venue: "Butterfly Garden",
+    rules: [" ", " "],
+    details: "",
+    orgname: "Pranav P Rao",
+    orgno: "7996021151",
+    fee: 20,
+    regfee: "Rs. 20 per team",
+    time: " ",
+    image: "ringtoss.png",
+  },
+  {
+    id: "IS06",
+    department: "IS",
+    name: "Corporate Quiz",
+    type: "T",
+    venue: "Room No: 401, 4th Floor",
+    rules: [
+      "4 members in each team.",
+      "Frame words with the help of pictures.",
+      "1 minute for each question.",
+    ],
+    details: "",
+    orgname: "Sonali T Chowta",
+    orgno: "9480106096",
+    //fee: 0,
+    fee: 0,
+    time: "10 AM - 11 AM",
+    date: "14/06/22",
+    image: "corporatequiz.jpg",
+  },
+  {
+    id: "IS07",
+    department: "IS",
+    name: "Logic Tenacity",
+    type: "T",
+    venue: "ISE Lab, 4th Floor",
+    rules: ["2 members from each team.", "Debugging the code from above hint."],
+    details: "",
+    orgname: "Rakshan B N",
+    orgno: "9880803391",
+    //fee: 00,
+    date: "14/06/22",
+    time: "2 PM to 3 PM",
+    image: "logintenacity.png",
+  },
+  {
+    id: "IS08",
+    department: "IS",
+    name: "Tech Hunt",
+    type: "T",
+    venue: "4th Floor",
+    rules: [
+      "4 members in a team.",
+      "Hint about the next game will be provided.",
+    ],
+    details: "",
+    orgname: "Pranav Rao",
+    orgno: "7996021151",
+    //fee: 0,
+    date: "14/06/22",
+    time: "3 PM to 4 PM",
+    image: "techhunt.png",
+  },
+  {
+    id: "IS09",
+    department: "IS",
+    name: "Trace Torch",
+    type: "T",
+    venue: "Badminton court",
+    rules: [
+      "4 members in a team.",
+      "Contains 4 levels",
+      "1 member will be unlocked after the completion of each round.",
+    ],
+    details: "",
+    orgname: "Chintan BM",
+    orgno: "9995441940",
+    //fee: 0,
+    date: "15/06/22",
+    time: "10 AM to 12 PM",
+    image: "tracetorch.png",
+  },
+];
 
 const CLIENT_ID =
   "995606782248-0roe6ldp75b9am26bdkl721lkd6s18rq.apps.googleusercontent.com";
@@ -104,11 +261,33 @@ const sendMail = async (
   }
 };
 
-dotenv.config();
+dotenv.config({path: './.env'});
+
+const DB = process.env.DATABASE.replace('<password>', process.env.DATABASE_PASSWORD);
+
+mongoose.connect(DB, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+}).then((con) => {
+  console.log('DB connection successful');
+})
+
 const app = express();
 
 app.use(cors());
 app.use(bodyParser.json());
+
+// const importData = async () => {
+//   try {
+//     await Event.create(csdetails);
+//     console.log('Data successfully loaded!');
+//   } catch (err) {
+//     console.log(err);
+//   }
+//   process.exit();
+// };
+
+// importData();
 
 app.use(express.json());
 
@@ -118,7 +297,7 @@ app.use(
   })
 );
 
-const users = [];
+app.use('/api/v1/events', eventRouter);
 
 app.post("/razorpay", async (req, res) => {
   const payment_capture = 1;
@@ -132,20 +311,19 @@ app.post("/razorpay", async (req, res) => {
   amount = req.body.amount;
   event = req.body.event;
   venue = req.body.venue;
-  keyId = req.body.key.id;
-  keySecret = req.body.key.secret;
-
-  // const razorpay = new Razorpay({
-  //   key_id: "rzp_test_EOVG1JEwo2iuL6",
-  //   key_secret: "KzrVXdNwqpAN4extXi7qktYF",
-  // });
+  const keyId = req.body.key.id;
+  const keySecret = req.body.key.secret;
 
   const razorpay = new Razorpay({
-    key_id: keyId,
-    key_secret: keySecret,
+    key_id: "rzp_test_EOVG1JEwo2iuL6",
+    key_secret: "KzrVXdNwqpAN4extXi7qktYF",
   });
 
-  // const { name, email, college, paymentId } = req.body;
+  // const razorpay = new Razorpay({
+  //   key_id: keyId,
+  //   key_secret: keySecret,
+  // });
+
   const currency = "INR";
 
   const options = {
@@ -170,20 +348,14 @@ app.post("/razorpay", async (req, res) => {
 
 app.post("/verification", async (req, res) => {
   const secret = "12345678";
-
-  console.log(req.body);
-
   const crypto = require("crypto");
-
   const shasum = crypto.createHmac("sha256", secret);
+
   shasum.update(JSON.stringify(req.body));
+
   const digest = shasum.digest("hex");
 
-  console.log(digest, req.headers["x-razorpay-signature"]);
-
   if (digest === req.headers["x-razorpay-signature"]) {
-    console.log("request is legit");
-
     require("fs").writeFileSync(
       "payment1.json",
       JSON.stringify(req.body, null, 4)
@@ -203,7 +375,6 @@ app.post("/verification", async (req, res) => {
       paymentId: digest,
     }
   );
-
   sendMail(name, email, college, phone, usn, event, amount, digest)
     .then((result) => console.log("Email sent...", result))
     .catch((error) => console.log(error.message));

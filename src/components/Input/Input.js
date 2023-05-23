@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import useInput from "../../hooks/use-input";
 import { useDispatch } from "react-redux";
 import { displayRazorPay } from "../../payment";
+import './Input.css';
 
 const isNotEmpty = (value) => value.trim() !== "";
 const isCollege = (value) => value.trim() !== "";
@@ -92,9 +93,9 @@ const Input = () => {
         <div className="app-modal-title">
           <h5>{name}</h5>
         </div>
-        <div className="app-form-modal">
+        <div style={{overflowY: 'scroll'}} className="app-form-modal">
           <form className="app-form">
-            <div className="form-group row">
+            <div className="form-group form-control-input row">
               <label
                 for="colFormLabelLg"
                 className="col-sm-2 col-form-label col-form-label-lg app-form-label"
@@ -115,7 +116,7 @@ const Input = () => {
                 )}
               </div>
             </div>
-            <div className="form-group row">
+            <div className="form-group form-control-input row">
               <label
                 for="colFormLabelLg"
                 className="col-sm-2 col-form-label col-form-label-lg app-form-label"
@@ -137,7 +138,7 @@ const Input = () => {
               </div>
             </div>
 
-            <div className="form-group row">
+            <div className="form-group form-control-input row">
               <label
                 for="colFormLabelLg"
                 className="col-sm-2 col-form-label col-form-label-lg app-form-label"
@@ -158,7 +159,7 @@ const Input = () => {
                 )}
               </div>
             </div>
-            <div className="form-group row">
+            <div className="form-group form-control-input row">
               <label
                 for="colFormLabelLg"
                 className="col-sm-2 col-form-label col-form-label-lg app-form-label"
@@ -196,7 +197,7 @@ const Input = () => {
           >
             Close
           </button>
-          {token && false && (
+          {token && (
             <button className="app-modal-register" onClick={displayPayment}>
               Submit
             </button>

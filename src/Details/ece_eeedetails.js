@@ -1,6 +1,7 @@
 const ece_eeedetails = [
   {
     id: "EE01",
+    department: "ECE",
     name: "Bulls Eye",
     type: "NT",
     venue: "Room No: 301, Main Building",
@@ -23,6 +24,7 @@ const ece_eeedetails = [
   },
   {
     id: "EE02",
+    department: "ECE",
     name: "Double Dhamaka",
     type: "NT",
     venue: "Room No: 101, Library Block",
@@ -45,6 +47,7 @@ const ece_eeedetails = [
   },
   {
     id: "EE03",
+    department: "ECE",
     name: "Guess N Burst",
     type: "T",
     venue: " ",
@@ -81,6 +84,7 @@ const ece_eeedetails = [
   },
   {
     id: "EE04", ///
+    department: "ECE",
     name: "Ideathon",
     type: "T",
     venue: "Room No: 303, Main Building",
@@ -100,6 +104,7 @@ const ece_eeedetails = [
   },
   {
     id: "EE05",
+    department: "ECE",
     name: "SM-MASTER",
     type: "NT",
     venue: "Room No: 304, Main Building",
@@ -120,6 +125,7 @@ const ece_eeedetails = [
   },
   {
     id: "EE06",
+    department: "ECE",
     name: "WattBug-Debug",
     type: "T",
     venue: "Room No: 001, Library Block",
@@ -140,7 +146,6 @@ const ece_eeedetails = [
   },
   // {
   //     id: "EE07",
-  //     name: "Paper Pitch",
   //     type: "T",
   //     venue: "VLSI Lab, 3rd Floor Main Building",
   //     rules: ['20 min duration',

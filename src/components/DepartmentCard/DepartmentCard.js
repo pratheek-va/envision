@@ -1,13 +1,9 @@
 import React from "react";
-import { useParams } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import "./DepartmentCard.css";
 
 const DepartmentCard = (props) => {
-  const params = useParams();
-  const extras = ["CUL", "SPORTS", "SSA"];
-  const { extra } = params;
-  let name;
+  const extras = ["CUL", "SS", "ARCH"];
 
   const route =
     extras.indexOf(props.code) > -1

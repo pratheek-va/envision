@@ -11,11 +11,11 @@ const keys = {
     id: "rzp_live_bYigrIun8Un0sF",
     secret: "M1GoSosuWdFhmdi4rk31rhTW",
   },
-  ec: {
+  ece: {
     id: "rzp_live_bWYDn8NSPY3d2k",
     secret: "sWdafPN3I8rwjX9oIbAQa54J",
   },
-  aa: {
+  au: {
     id: "rzp_live_rYCZSahfKuC5gN",
     secret: "d1Ea3p1TvY8QzlV6YFF3JXTH",
   },

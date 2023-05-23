@@ -3,15 +3,10 @@ import "./EventTypeCard.css";
 import { NavLink } from "react-router-dom";
 import { useParams } from "react-router";
 import { useDispatch, useSelector } from "react-redux";
-import { displayRazorPay } from "../../payment";
-import paperus from "../../Details/paperus";
 
 const EventTypeCard = (props) => {
   const dispatch = useDispatch();
   const params = useParams();
-
-  const name = useSelector((state) => state.auth.name);
-  const email = useSelector((state) => state.auth.email);
 
   const setTypeTechnical = () => {
     dispatch({ type: "TECHNICAL" });

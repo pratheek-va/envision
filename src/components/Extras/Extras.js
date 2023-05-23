@@ -1,37 +1,44 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { useParams } from "react-router-dom";
 import keys from "../../Details/key/key";
-import CulDetails from "../../Details/culturaldetails";
-import archidetails from "../../Details/archidetails";
-import sportSenior from "../../Details/sportsSeniorDetails";
+import axios from "axios";
 
 import EventCard from "../EventCard/EventCard";
 
 const Extras = () => {
-  const sports = [...sportSenior];
+  const [state, setStateData] = useState({
+    eventDetails: []
+  });
+
   let events = [];
   const eventsArray = [];
 
   const params = useParams();
 
   const { extra } = params;
-  console.log(extra);
+  
+  const getEventDetails = async (departmentID) => {
+    const response = await axios.get(`http://localhost:5000/api/v1/events/department/${departmentID}`);
+    return response.data.data.event;
+  }
 
-  if (extra === "CUL") {
-    for (let i = 0; i < CulDetails.length; i++) {
-      CulDetails[i].key = keys.envision;
-      events[i] = CulDetails[i];
-    }
-  } else if (extra === "SPORTS") {
-    for (let i = 0; i < sports.length; i++) {
-      sports[i].key = keys.envision;
-      events[i] = sports[i];
-    }
-  } else if (extra === "SSA") {
-    for (let i = 0; i < archidetails.length; i++) {
-      archidetails[i].key = keys.envision;
-      events[i] = archidetails[i];
-    }
+  const getAllDepartmentEvents = async () => {
+    const eventDetails = await getEventDetails(extra);
+    setStateData((currentData) => {
+      return {
+        ...currentData,
+        eventDetails
+      }
+    });
+  }
+
+  useEffect(() => {
+    getAllDepartmentEvents();
+  }, []);
+
+  for (let i = 0; i < state.eventDetails.length; i++) {
+    state.eventDetails[i].key = keys['envision'];
+    events[i] = state.eventDetails[i];
   }
 
   function splitArray(array, part) {
@@ -41,8 +48,6 @@ const Extras = () => {
   }
 
   splitArray(events, 3);
-
-  console.log(eventsArray);
 
   return (
     <React.Fragment>

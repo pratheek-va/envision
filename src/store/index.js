@@ -1,6 +1,24 @@
 import { configureStore } from "@reduxjs/toolkit";
 
-const modalReducer = (state = { show: false, input: false }, action) => {
+const formReducer = (state = { form: false }, action) => {
+  if(action.type === 'FORM_OPEN') {
+    return { ...state, form: true, onClick: action.onClick, id: action.id };
+  }else if(action.type === 'FORM_CLOSE') {
+    return { ...state, form: false };
+  }
+  return state;
+}
+
+const confirmReducer = (state = { confirm: false, id: '', title: '', confirmationText: '', onClick: null }, action) => {
+  if(action.type === 'CONFIRM') {
+    return { ...state, confirm: true, id: action.id, onClick: action.onClick, title: action.title, confirmationText: action.confirmationText };
+  }else if(action.type === 'CONFIRM_CLOSE') {
+    return { ...state, confirm: false };
+  }
+  return state;
+}
+
+const modalReducer = (state = { show: false, input: false, confirm: false }, action) => {
   if (action.type === "SHOW") {
     return { ...state, show: true };
   } else if (action.type === "CLOSE") {
@@ -85,10 +103,12 @@ const authReducer = (state = currentUser, action) => {
 
 const store = configureStore({
   reducer: {
+    confirm: confirmReducer,
     modal: modalReducer,
     detail: detailReducer,
     event: eventTypeReducer,
     auth: authReducer,
+    form: formReducer
   },
 });
 

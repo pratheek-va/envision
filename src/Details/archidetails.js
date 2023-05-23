@@ -1,6 +1,7 @@
 const archidetails = [
   {
     id: "AR01",
+    department: "ARCH",
     name: "Thrill Fill (Face Painting)",
     type: "NT",
     venue: "Studio 001 Architecture Block",
@@ -21,6 +22,7 @@ const archidetails = [
   },
   {
     id: "AR02",
+    department: "ARCH",
     name: "Yummy Town (Cook without fire)",
     type: "NT",
     venue: "Studio 006 Architecture Block",
@@ -40,6 +42,7 @@ const archidetails = [
   },
   {
     id: "AR03",
+    department: "ARCH",
     name: "Collage poster making",
     type: "NT",
     venue: " ",
@@ -60,6 +63,7 @@ const archidetails = [
   },
   {
     id: "AR04",
+    department: "ARCH",
     name: "Style the outfit (out of newspaper)",
     type: "NT",
     venue: "Architecture Block foyer",
@@ -80,6 +84,7 @@ const archidetails = [
   },
   {
     id: "AR05",
+    department: "ARCH",
     name: "Skyscrapper (paper tower)",
     type: "NT",
     venue: "Studio 002 Architecture Block",
@@ -99,6 +104,7 @@ const archidetails = [
   },
   {
     id: "SS01",
+    department: "ARCH",
     name: "STEP UP 2022 (SOLO DANCE BATTLE)",
     venue: "",
     rounds: true,

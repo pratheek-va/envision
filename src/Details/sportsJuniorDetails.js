@@ -1,6 +1,7 @@
 const sportJunior = [
   {
     id: "",
+    department: "SJ",
     name: "Mini Fustal",
     date: "16-06-2022 ",
     venue: "College ground",
@@ -15,6 +16,7 @@ const sportJunior = [
   },
   {
     id: "",
+    department: "SJ",
     name: "Chess",
     date: "16-06-2022",
     venue: "004",
@@ -29,6 +31,7 @@ const sportJunior = [
   },
   {
     id: "",
+    department: "SJ",
     name: "Online ludo",
     date: "16-06-2022",
     venue: "302",
@@ -43,6 +46,7 @@ const sportJunior = [
   },
   {
     id: "",
+    department: "SJ",
     name: "Arm Wrestling",
     date: "16-06-2022",
     venue: "M203",

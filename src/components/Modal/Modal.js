@@ -15,7 +15,7 @@ const Modal = () => {
         <p className="warning-modal-text">Please Sign In to register</p>
         <p className="warning-modal-text">Go to Home page to sign in</p>
         <div style={{ display: "flex", justifyContent: "space-around" }}>
-          {window.location.pathname != "/home" && (
+          {window.location.pathname !== "/home" && (
             <div className={"warning-modal-link"}>
               <NavLink
                 to="/home"

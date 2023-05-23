@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./Home.css";
 import app from "../../../Firebase/firebase";
 
@@ -15,8 +15,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import stepup from "../../../Details/stepupdetails";
 import keys from "../../../Details/key/key";
+import Events from "../Events/Events";
 
-const Home = () => {
+const Home = (props) => {
+  const [state, setStateData] = useState({search: ''});
   const showDetails = () => {
     dispatch({ type: "SHOW" });
     dispatch({
@@ -35,8 +37,6 @@ const Home = () => {
     });
   };
 
-  console.log(stepup[0].details);
-
   const dispatch = useDispatch();
 
   const token = useSelector((state) => state.auth.token);
@@ -54,7 +54,6 @@ const Home = () => {
         const credential = GoogleAuthProvider.credentialFromResult(result);
         const token = result.user.uid;
         const email = result.user.email;
-        console.log(token);
         dispatch({ type: "LOGIN", token, email });
       })
       .catch((error) => {
@@ -72,7 +71,6 @@ const Home = () => {
         dispatch({ type: "LOGIN", token: user.uid, email: user.email });
       } else {
         dispatch({ type: "LOGOUT", token: "", email: "" });
-        console.log("User not signed in");
       }
     });
   });
@@ -113,8 +111,9 @@ const Home = () => {
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
     // Display the result in the element with id="demo"
-    document.getElementById("counter").innerHTML =
-      days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+    if(document.getElementById("counter"))
+      document.getElementById("counter").innerHTML =
+        days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
 
     // If the count down is finished, write some text
     if (distance < 0) {
@@ -122,6 +121,18 @@ const Home = () => {
       document.getElementById("counter").innerHTML = "00d 00h 00m 00s";
     }
   }, 1000);
+
+  useEffect(() => {
+    setStateData((currentData) => {
+      return {
+        ...currentData,
+        search: props.searchText,
+      }
+    })
+  }, [props.searchText])
+
+  // if(props.searchText) return <Events searchText={state.search}/>
+
   return (
     <React.Fragment>
       <div className="body">
@@ -136,7 +147,7 @@ const Home = () => {
                 type="gif"
               /> */}
               <h1 className="envision-title">
-                <span className={"title-style"}>EN</span>vision'22
+                <span className={"title-style"}>TECH</span>NEX
               </h1>
               <p className="tagline">It's time to get your game face on...</p>
               <div className="registration">

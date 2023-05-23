@@ -1,6 +1,7 @@
 const mech_marinedetails = [
   {
     id: "MM01",
+    department: "MM",
     name: "Road Rash 69",
     type: "NT",
     venue: "Room No: M303",
@@ -21,6 +22,7 @@ const mech_marinedetails = [
   },
   {
     id: "MM03",
+    department: "MM",
     name: "Ace of Race",
     type: "NT",
     venue: "Near main stage",
@@ -40,6 +42,7 @@ const mech_marinedetails = [
   },
   {
     id: "MM04",
+    department: "MM",
     name: "Bridge It",
     type: "T",
     venue: "Room No: M202 ",
@@ -60,6 +63,7 @@ const mech_marinedetails = [
   },
   {
     id: "MM05",
+    department: "MM",
     name: "Black pearl",
     type: "T",
     venue: "Room No: M203",
@@ -74,6 +78,7 @@ const mech_marinedetails = [
   },
   {
     id: "MM06",
+    department: "MM",
     name: "Fix in the mind",
     type: "T",
     venue: "Room No: M201",
@@ -88,6 +93,7 @@ const mech_marinedetails = [
   },
   {
     id: "MM07",
+    department: "MM",
     name: "Make it fancy",
     type: "NT",
     venue: "Room No: M102",
