@@ -27,7 +27,6 @@ export const displayRazorPay = async (
     }),
   }).then((t) => t.json());
 
-  console.log(data);
   // https://envision22.herokuapp.com/razorpay
   var options = {
     key: key.id,

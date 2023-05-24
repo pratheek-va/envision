@@ -225,8 +225,6 @@ const sendMail = async (
 
     qrcode = await qr.toDataURL(strData);
 
-    console.log(qrcode);
-
     const mailOptions = {
       from: "ENVISION <yours authorised email address@gmail.com>",
       to: email,
@@ -301,8 +299,6 @@ app.use('/api/v1/events', eventRouter);
 
 app.post("/razorpay", async (req, res) => {
   const payment_capture = 1;
-  console.log(req.body);
-
   name = req.body.name;
   email = req.body.email;
   usn = req.body.usn;

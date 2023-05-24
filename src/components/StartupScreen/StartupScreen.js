@@ -19,7 +19,6 @@ const StartupScreen = () => {
       dispatch({ type: "LOGIN", token: user.uid, email: user.email });
     } else {
       dispatch({ type: "LOGOUT", token: "", email: "" });
-      console.log("User not signed in");
     }
   });
 

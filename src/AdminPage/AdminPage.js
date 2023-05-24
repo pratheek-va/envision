@@ -80,8 +80,6 @@ const AdminPage = () => {
     if (registration[i].event === event) registers.unshift(registration[i]);
   }
 
-  console.log(registers);
-
   return (
     <React.Fragment>
       <div className="container" style={{ height: "100vh" }}>

@@ -106,7 +106,6 @@ exports.createEvent = async (req, res) => {
 
 exports.updateEvent = async (req, res) => {
   try {
-    console.log(req.body);
     const event = await Event.findByIdAndUpdate(req.params.id, req.body, {
       new: true,
       runValidators: true

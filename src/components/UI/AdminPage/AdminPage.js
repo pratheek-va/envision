@@ -22,7 +22,6 @@ const getRegistration = async () => {
   for (const i in data) {
     registration.unshift(data[i]);
   }
-  console.log(registration);
 };
 
 getRegistration();
@@ -79,8 +78,6 @@ const AdminPage = () => {
   for (let i = 0; i < registration.length; i++) {
     if (registration[i].event === event) registers.unshift(registration[i]);
   }
-
-  console.log(registers);
 
   return (
     <React.Fragment>

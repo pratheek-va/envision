@@ -23,7 +23,6 @@ const Input = () => {
 
   const getEvent = async (eventId) => {
     const response = await axios.get(`http://localhost:5000/api/v1/events/${eventId}`);
-    console.log(response);
     const data = response.data.data.event;
     data.rules = data.rules.join(',');
     reset({...data});
@@ -51,8 +50,6 @@ const Input = () => {
   const closeFormModal = () => {
     dispatch({type: 'FORM_CLOSE'});
   }
-
-  console.log(state);
 
   return (
     <div className="event-detail-modal" style={{overflowY: 'scroll'}}>
