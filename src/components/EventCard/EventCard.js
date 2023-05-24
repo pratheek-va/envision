@@ -28,13 +28,13 @@ const EventCard = (props) => {
   };
 
   const deleteEvent = async (eventId) => {
-    await axios.delete(`http://localhost:5000/api/v1/events/${eventId}`);
+    await axios.delete(`https://envision-sfxf.onrender.com/api/v1/events/${eventId}`);
     dispatch({ type: 'CONFIRM_CLOSE' });
     props.fetchEvents();
   }
 
   const updateEvent = async (formData, eventId) => {
-    await axios.patch(`http://localhost:5000/api/v1/events/${eventId}`, formData);
+    await axios.patch(`https://envision-sfxf.onrender.com/api/v1/events/${eventId}`, formData);
     dispatch({type: 'FORM_CLOSE'});
     props.fetchEvents();
   }

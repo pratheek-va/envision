@@ -9,7 +9,7 @@ export const displayRazorPay = async (
   venue,
   key
 ) => {
-  const data = await fetch(`http://localhost:5000/razorpay`, {
+  const data = await fetch('http://localhost:5000/razorpay', {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

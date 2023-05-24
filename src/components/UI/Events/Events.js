@@ -16,16 +16,16 @@ const Events = (props) => {
   });
 
   const getEventDetails = async (departmentID) => {
-    const response = await axios.get(`http://localhost:5000/api/v1/events/department/${departmentID}`);
+    const response = await axios.get(`https://envision-sfxf.onrender.com/api/v1/events/department/${departmentID}`);
     return response.data.data.event;
   }
 
   const getAllEvents = async (searchText) => {
     if(!props.searchText) {
-      const response = await axios.get('http://localhost:5000/api/v1/events');
+      const response = await axios.get('https://envision-sfxf.onrender.com/api/v1/events');
       return response.data.data.events; 
     } else {
-      const response = await axios.get(`http://localhost:5000/api/v1/events/search/${searchText}`);
+      const response = await axios.get(`https://envision-sfxf.onrender.com/api/v1/events/search/${searchText}`);
       setStateData((currentData) => {
         return {
           ...currentData,

@@ -328,7 +328,7 @@ app.post("/razorpay", async (req, res) => {
     receipt: shortid.generate(),
     payment_capture,
   };
-
+  
   try {
     const response = await razorpay.orders.create(options);
     console.log(response);

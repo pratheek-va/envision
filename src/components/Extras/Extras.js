@@ -18,7 +18,7 @@ const Extras = () => {
   const { extra } = params;
   
   const getEventDetails = async (departmentID) => {
-    const response = await axios.get(`http://localhost:5000/api/v1/events/department/${departmentID}`);
+    const response = await axios.get(`https://envision-sfxf.onrender.com/api/v1/events/department/${departmentID}`);
     return response.data.data.event;
   }
 

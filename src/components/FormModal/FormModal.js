@@ -22,7 +22,7 @@ const Input = () => {
   const action = useSelector((state) => state.form);
 
   const getEvent = async (eventId) => {
-    const response = await axios.get(`http://localhost:5000/api/v1/events/${eventId}`);
+    const response = await axios.get(`https://envision-sfxf.onrender.com/api/v1/events/${eventId}`);
     const data = response.data.data.event;
     data.rules = data.rules.join(',');
     reset({...data});
