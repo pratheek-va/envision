@@ -9,7 +9,7 @@ export const displayRazorPay = async (
   venue,
   key
 ) => {
-  const data = await fetch('http://localhost:5000/razorpay', {
+  const data = await fetch('https://envision-sfxf.onrender.com/razorpay', {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -27,9 +27,11 @@ export const displayRazorPay = async (
     }),
   }).then((t) => t.json());
 
+  console.log(data);
+
   // https://envision22.herokuapp.com/razorpay
   var options = {
-    key: key.id,
+    key: "rzp_test_pWtJFLGWsPGRO7",
     amount: data.amount,
     currency: data.currency,
     name: event,

@@ -307,12 +307,12 @@ app.post("/razorpay", async (req, res) => {
   amount = req.body.amount;
   event = req.body.event;
   venue = req.body.venue;
-  const keyId = req.body.key.id;
-  const keySecret = req.body.key.secret;
+  // const keyId = req.body.key.id;
+  // const keySecret = req.body.key.secret;
 
   const razorpay = new Razorpay({
-    key_id: "rzp_test_EOVG1JEwo2iuL6",
-    key_secret: "KzrVXdNwqpAN4extXi7qktYF",
+    key_id: "rzp_test_pWtJFLGWsPGRO7",
+    key_secret: "NBMsptSltj2XQWDQjTXBPB3y",
   });
 
   // const razorpay = new Razorpay({
@@ -328,7 +328,7 @@ app.post("/razorpay", async (req, res) => {
     receipt: shortid.generate(),
     payment_capture,
   };
-  
+
   try {
     const response = await razorpay.orders.create(options);
     console.log(response);

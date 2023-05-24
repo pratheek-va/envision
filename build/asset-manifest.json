@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.dfa3bfad.css",
-    "main.js": "/static/js/main.fe6bdd6e.js",
+    "main.js": "/static/js/main.b8e510ac.js",
     "static/media/22.JPG": "/static/media/22.552da93cfe3721de9bbc.JPG",
     "static/media/2.jpg": "/static/media/2.5b41700c5b2f20485748.jpg",
     "static/media/10.jpg": "/static/media/10.4f470dcf05f8f44a5034.jpg",
@@ -197,10 +197,10 @@
     "static/media/skillhouse.png": "/static/media/skillhouse.270fcbc9471b4e724551.png",
     "index.html": "/index.html",
     "main.dfa3bfad.css.map": "/static/css/main.dfa3bfad.css.map",
-    "main.fe6bdd6e.js.map": "/static/js/main.fe6bdd6e.js.map"
+    "main.b8e510ac.js.map": "/static/js/main.b8e510ac.js.map"
   },
   "entrypoints": [
     "static/css/main.dfa3bfad.css",
-    "static/js/main.fe6bdd6e.js"
+    "static/js/main.b8e510ac.js"
   ]
 }

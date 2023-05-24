@@ -65,7 +65,6 @@ const Header = (props) => {
   };
 
   const createEvent = async (formData, eventId) => {
-    console.log(formData);
     await axios.post(`https://envision-sfxf.onrender.com/api/v1/events`, formData);
     dispatch({type: 'FORM_CLOSE'});
   };
